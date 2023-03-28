@@ -2,4 +2,6 @@
 dataset/Cifar10/
 dataset/mnist/
 results/
+system/models/
+system/outputs/
 *.ipynb
