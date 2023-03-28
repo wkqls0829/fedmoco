@@ -8,7 +8,7 @@
 # nohup python -u generate_mnist.py noniid - dir > mnist_dataset.out 2>&1
 # cd ../system/
 
-# nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data mnist -m dnn -algo FedAvg -gr 2000 -did 0 -go dnn > mnist_fedavg.out 2>&1 &
+nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data mnist -m dnn -algo FedAvg -gr 2000 -did 0 -go dnn > mnist_fedavg.out 2>&1 &
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data mnist -m cnn -algo FedAvg -gr 2000 -did 0 -go cnn > mnist_fedavg1.out 2>&1 &
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data mnist -m resnet -algo FedAvg -gr 2000 -did 0 -go resnet > mnist_fedavg2.out 2>&1 &
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data mnist -m dnn -algo FedAvg -gr 2000 -did 0 -cdr 0.5 -go unstable > mnist_fedavg1.out 2>&1 &
@@ -17,7 +17,7 @@
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data mnist -m cnn -algo FedProx -gr 2000 -did 0 -mu 0.001 -go cnn > mnist_fedprox1.out 2>&1 &
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data mnist -m resnet -algo FedProx -gr 2000 -did 0 -mu 0.001 -go resnet > mnist_fedprox2.out 2>&1 &
 
-# nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data mnist -m dnn -algo pFedMe -gr 2000 -did 0 -lrp 0.09 -bt 1 -lam 15 -go dnn > mnist_pfedme.out 2>&1 &
+# nohub python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data mnist -m dnn -algo pFedMe -gr 1000 -did 5 -lrp 0.09 -bt 1 -lam 15 -go dnn > mnist_pfedme.out 2>&1 &
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data mnist -m cnn -algo pFedMe -gr 2000 -did 0 -lrp 0.1 -bt 1 -lam 15 -go cnn > mnist_pfedme1.out 2>&1 &
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data mnist -m resnet -algo pFedMe -gr 2000 -did 0 -lrp 0.1 -bt 1 -lam 15 -go resnet > mnist_pfedme2.out 2>&1 &
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data mnist -m dnn -algo pFedMe -gr 2000 -did 0 -lrp 0.09 -bt 1 -lam 15 -cdr 0.5 -go unstable > mnist_pfedme1.out 2>&1 &
@@ -57,13 +57,13 @@
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data Cifar10 -m cnn -algo FedProx -gr 2000 -did 0 -mu 0.001 -go cnn > cifar10_fedprox1.out 2>&1 &
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data Cifar10 -m resnet -algo FedProx -gr 2000 -did 0 -mu 0.001 -go resnet > cifar10_fedprox2.out 2>&1 &
 
-# nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data Cifar10 -m dnn -algo pFedMe -gr 2000 -did 0 -lr 0.01 -lrp 0.01 -bt 1 -lam 15 -go dnn > cifar10_pfedme.out 2>&1 &
+# python main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data Cifar10 -m dnn -algo pFedMe -gr 2000 -did 4 -lr 0.01 -lrp 0.01 -bt 1 -lam 15 -go dnn
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data Cifar10 -m cnn -algo pFedMe -gr 2000 -did 0 -lr 0.01 -lrp 0.01 -bt 1 -lam 15 -go cnn > cifar10_pfedme1.out 2>&1 &
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data Cifar10 -m resnet -algo pFedMe -gr 2000 -did 0 -lr 0.01 -lrp 0.01 -bt 1 -lam 15 -go resnet > cifar10_pfedme2.out 2>&1 &
 # # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data Cifar10 -m dnn -algo pFedMe -gr 2000 -did 0 -lr 0.01 -lrp 0.01 -bt 1 -lam 15 -cdr 0.5 -go unstable > cifar10_pfedme1.out 2>&1 &
 
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data Cifar10 -m dnn -algo PerAvg -gr 2000 -did 0 -bt 0.001 -go dnn > cifar10_peravg.out 2>&1 &
-# nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data Cifar10 -m cnn -algo PerAvg -gr 2000 -did 0 -bt 0.001 -go cnn > cifar10_peravg1.out 2>&1 &
+nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data Cifar10 -m cnn -algo PerAvg -gr 2000 -did 5 -bt 0.001 -go cnn > cifar10_peravg1.out 2>&1 &
 # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data Cifar10 -m resnet -algo PerAvg -gr 2000 -did 0 -bt 0.001 -go resnet > cifar10_peravg2.out 2>&1 &
 # # nohup python -u main.py -lbs 16 -nc 20 -jr 1 -nb 10 -data Cifar10 -m dnn -algo PerAvg -gr 2000 -did 0 -bt 0.001 -cdr 0.5 -go unstable > cifar10_peravg1.out 2>&1 &
 

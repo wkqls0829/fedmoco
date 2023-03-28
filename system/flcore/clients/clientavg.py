@@ -29,7 +29,10 @@ class clientAVG(Client):
         if self.train_slow:
             max_local_steps = np.random.randint(1, max_local_steps // 2)
 
+        loss_collector = []
+
         for step in range(max_local_steps):
+            epoch_loss = []
             for i, (x, y) in enumerate(trainloader):
                 if type(x) == type([]):
                     x[0] = x[0].to(self.device)
@@ -41,8 +44,10 @@ class clientAVG(Client):
                 self.optimizer.zero_grad()
                 output = self.model(x)
                 loss = self.loss(output, y)
+                epoch_loss.append(loss.item())
                 loss.backward()
                 self.optimizer.step()
+            loss_collector.append(sum(epoch_loss)/len(epoch_loss))
 
         # self.model.cpu()
 
@@ -52,3 +57,5 @@ class clientAVG(Client):
         if self.privacy:
             eps, DELTA = get_dp_params(privacy_engine)
             print(f"Client {self.id}", f"epsilon = {eps:.2f}, sigma = {DELTA}")
+
+        return loss_collector

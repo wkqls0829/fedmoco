@@ -29,6 +29,8 @@ from flcore.servers.serverdyn import FedDyn
 from flcore.servers.servermoon import MOON
 from flcore.servers.serverbabu import FedBABU
 from flcore.servers.serverapple import APPLE
+from flcore.servers.servermgda import FedMGDA
+from flcore.servers.servermoco import FedMoCo
 
 from flcore.trainmodel.models import *
 
@@ -229,7 +231,13 @@ def run(args):
 
         elif args.algorithm == "APPLE":
             server = APPLE(args, i)
+
+        elif args.algorithm == "FedMGDA":
+            server = FedMGDA(args, i)
             
+        elif args.algorithm == "FedMoCo":
+            server = FedMoCo(args, i)
+
         else:
             raise NotImplementedError
 
@@ -302,7 +310,7 @@ if __name__ == "__main__":
     # pFedMe / PerAvg / FedProx / FedAMP / FedPHP
     parser.add_argument('-bt', "--beta", type=float, default=0.0,
                         help="Average moving parameter for pFedMe, Second learning rate of Per-FedAvg, \
-                        or L1 regularization weight of FedTransfer")
+                        or L1 regularization weight of FedTransfer, tracking variable learning rate for FedMoCo")
     parser.add_argument('-lam', "--lamda", type=float, default=1.0,
                         help="Regularization weight for pFedMe and FedAMP")
     parser.add_argument('-mu', "--mu", type=float, default=0,
@@ -332,6 +340,12 @@ if __name__ == "__main__":
     # APPLE
     parser.add_argument('-dlr', "--dr_learning_rate", type=float, default=0.0)
     parser.add_argument('-L', "--L", type=float, default=1.0)
+    # FedMGDA
+    parser.add_argument('-fr', "--finetune_round", type=int, default=10000)
+    parser.add_argument('-stw', "--static_weight", type=float, default=0.0)
+    parser.add_argument('-rh', "--rho", type=float, default=0.0)
+
+    parser.add_argument('-tid', "--test_id", type=int, default=10000)
 
     args = parser.parse_args()
 

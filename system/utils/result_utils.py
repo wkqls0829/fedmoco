@@ -9,12 +9,12 @@ def average_data(algorithm="", dataset="", goal="", times=10, length=800):
     test_acc_data = np.average(test_acc, axis=0)
 
 
-    max_accurancy = []
+    max_accuracy = []
     for i in range(times):
-        max_accurancy.append(test_acc[i].max())
+        max_accuracy.append(test_acc[i].max())
 
-    print("std for best accurancy:", np.std(max_accurancy))
-    print("mean for best accurancy:", np.mean(max_accurancy))
+    print("std for best accuracy:", np.std(max_accuracy))
+    print("mean for best accuracy:", np.mean(max_accuracy))
 
 
 def get_all_results_for_one_algo(algorithm="", dataset="", goal="", times=10, length=800):

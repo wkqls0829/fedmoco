@@ -1,0 +1,41 @@
+==================================================
+Algorithm: pFedMe
+Local batch size: 16
+Local steps: 1
+Local learing rate: 0.005
+Total number of clients: 20
+Clients join in each round: 1.0
+Client drop rate: 0.0
+Time select: False
+Time threthold: 10000
+Global rounds: 1000
+Running times: 1
+Dataset: mnist
+Local model: dnn
+Using device: cuda
+Cuda device id: 5
+==================================================
+
+============= Running time: 0th =============
+Creating server and clients ...
+DNN(
+  (fc1): Linear(in_features=784, out_features=100, bias=True)
+  (fc): Linear(in_features=100, out_features=10, bias=True)
+)
+
+Join ratio / total clients: 1.0 / 20
+Finished creating server and clients.
+
+-------------Round number: 0-------------
+
+Evaluate personalized model
+Traceback (most recent call last):
+  File "main.py", line 391, in <module>
+    run(args)
+  File "main.py", line 244, in run
+    server.train()
+  File "/home/kjb/moofl/PFL-Non-IID/system/flcore/servers/serverpFedMe.py", line 46, in train
+    self.evaluate_personalized()
+  File "/home/kjb/moofl/PFL-Non-IID/system/flcore/servers/serverpFedMe.py", line 100, in evaluate_personalized
+    stats_train = self.train_accuracy_and_loss_personalized()
+AttributeError: 'pFedMe' object has no attribute 'train_accuracy_and_loss_personalized'
