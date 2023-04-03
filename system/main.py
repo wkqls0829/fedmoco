@@ -249,11 +249,11 @@ def run(args):
     
 
     # Global average
-    average_data(dataset=args.dataset, 
-                algorithm=args.algorithm, 
-                goal=args.goal, 
-                times=args.times, 
-                length=args.global_rounds/args.eval_gap+1)
+    # average_data(dataset=args.dataset, 
+    #             algorithm=args.algorithm, 
+    #             goal=args.goal, 
+    #             times=args.times, 
+    #             length=args.global_rounds/args.eval_gap+1)
 
     print("All done!")
 
@@ -344,6 +344,7 @@ if __name__ == "__main__":
     parser.add_argument('-fr', "--finetune_round", type=int, default=10000)
     parser.add_argument('-stw', "--static_weight", type=float, default=0.0)
     parser.add_argument('-rh', "--rho", type=float, default=0.0)
+    parser.add_argument('-ep', "--epsilon", type=float, default=1.0)
 
     parser.add_argument('-tid', "--test_id", type=int, default=10000)
 

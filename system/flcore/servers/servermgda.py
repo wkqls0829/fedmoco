@@ -24,7 +24,6 @@ class FedMGDA(Server2):
         # self.load_model()
         self.Budget = []
 
-        self.epsilon=1
         self.finetune_round = args.finetune_round
 
 
@@ -87,7 +86,7 @@ class FedMGDA(Server2):
                     K[i,j] += torch.mul(paramG.data - paramI.data, paramG.data - paramJ.data).sum()
 
 
-        Q = 0.5 * (K + K.T)
+        Q = (K + K.T)
 
 
         p = np.zeros(n, dtype=float)
@@ -105,6 +104,7 @@ class FedMGDA(Server2):
         omega = quadprog.solve_qp(Q,p,A,b_concat,meq=1)[0]
         for i, ids in enumerate(self.selected_client_ids):
             self.client_weights[ids] = omega[i]
+        print(omega)
 
 
 

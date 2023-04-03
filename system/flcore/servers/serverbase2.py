@@ -33,6 +33,8 @@ class Server2(object):
         self.static_weight = args.static_weight
         self.test_id = args.test_id
         self.rho = args.rho
+        self.epsilon= args.epsilon
+
 
         self.clients = []
         self.selected_clients = []

@@ -1,5 +1,5 @@
 #!/bin/bash
-nohup python -u main.py -nc 20 -data Cifar10 -m cnn -algo FedMoCo -gr 5 -jr 0.25 -rh 0.1  -did 7 -go cnn -fr 2000 -tid 20021 > test1.out 2>&1 &
+nohup python -u main.py -nc 20 -data Cifar10 -m cnn -algo FedMoCo -gr 5 -jr 1 -bt 0.5 -did 0 -go cnn -fr 2000 -tid 90001 > test1.out 2>&1 &
 
 # nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedMGDA -gr 1000 -rh 0.1  -did 5 -go cnn -fr 0 -bt 1 -tid 10021 > outputs/cifar10_fedavg_10_10021.out 2>&1 &
 

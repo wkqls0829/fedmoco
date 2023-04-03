@@ -27,7 +27,6 @@ class FedMoCo(Server2):
         # self.load_model()
         self.Budget = []
 
-        self.epsilon=1
         self.finetune_round = args.finetune_round
         self.tracking_variables = [copy.deepcopy(self.global_model) for i in range(self.num_clients)]
         for tv in self.tracking_variables:
@@ -119,7 +118,7 @@ class FedMoCo(Server2):
                 for paramI, paramJ in zip(self.tracking_variables[self.selected_client_ids[i]].parameters(), self.tracking_variables[self.selected_client_ids[j]].parameters()):
                     K[i,j] += torch.mul(paramI.data, paramJ.data).sum()
 
-        Q = 0.5 * (K + K.T)
+        Q = (K + K.T)
 
         p = np.zeros(n, dtype=float)
         a = np.ones(n, dtype=float).reshape(-1, 1)
@@ -136,6 +135,7 @@ class FedMoCo(Server2):
         omega = quadprog.solve_qp(Q,p,A,b_concat,meq=1)[0]
         for i, ids in enumerate(self.selected_client_ids):
             self.client_weights[ids] = omega[i]
+        print(omega)
 
 
 
