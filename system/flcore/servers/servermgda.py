@@ -85,6 +85,11 @@ class FedMGDA(Server2):
                 for paramI , paramJ , paramG in zip(self.client_models[self.selected_client_ids[i]].parameters(), self.client_models[self.selected_client_ids[j]].parameters(), self.global_model.parameters()):
                     K[i,j] += torch.mul(paramG.data - paramI.data, paramG.data - paramJ.data).sum()
 
+        Knorm = 0
+        for i in range(0,n):
+            Knorm += K[i,i]
+        Knorm = Knorm / n
+
 
         Q = (K + K.T)
 
@@ -92,7 +97,7 @@ class FedMGDA(Server2):
         p = np.zeros(n, dtype=float)
         a = np.ones(n, dtype=float).reshape(-1, 1)
         Id = np.eye(n, dtype=float)
-        R = Id * self.rho
+        R = Id * self.rho * Knorm
         Q = R + Q
         neg_Id = -1 * np.eye(n, dtype=float)
         lower_b = (Wavg - epsilon) * np.ones(n,dtype=float)
