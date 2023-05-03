@@ -49,10 +49,12 @@ class Server(object):
         self.train_slow_rate = args.train_slow_rate
         self.send_slow_rate = args.send_slow_rate
 
+        self.data_dir = args.data_dir
+
     def set_clients(self, args, clientObj):
         for i, train_slow, send_slow in zip(range(self.num_clients), self.train_slow_clients, self.send_slow_clients):
-            train_data = read_client_data(self.dataset, i, is_train=True)
-            test_data = read_client_data(self.dataset, i, is_train=False)
+            train_data = read_client_data(self.dataset, i, is_train=True, data_dir=self.data_dir)
+            test_data = read_client_data(self.dataset, i, is_train=False, data_dir=self.data_dir)
             client = clientObj(args, 
                             id=i, 
                             train_samples=len(train_data), 

@@ -31,6 +31,7 @@ from flcore.servers.serverbabu import FedBABU
 from flcore.servers.serverapple import APPLE
 from flcore.servers.servermgda import FedMGDA
 from flcore.servers.servermoco import FedMoCo
+from flcore.servers.servercentral import FedCentral
 
 from flcore.trainmodel.models import *
 
@@ -238,6 +239,9 @@ def run(args):
         elif args.algorithm == "FedMoCo":
             server = FedMoCo(args, i)
 
+        elif args.algorithm == "FedCentral":
+            server = FedCentral(args, i)
+
         else:
             raise NotImplementedError
 
@@ -347,6 +351,10 @@ if __name__ == "__main__":
     parser.add_argument('-ep', "--epsilon", type=float, default=1.0)
 
     parser.add_argument('-tid', "--test_id", type=int, default=10000)
+    parser.add_argument('-dd', "--data_dir", type=str, default=None)
+
+    parser.add_argument('-cdn', "--central_data_num", type=int, default=1)
+    parser.add_argument('-cdd', "--central_data_dir", type=str, default=None)
 
     args = parser.parse_args()
 

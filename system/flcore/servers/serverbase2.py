@@ -59,14 +59,16 @@ class Server2(object):
         self.train_slow_rate = args.train_slow_rate
         self.send_slow_rate = args.send_slow_rate
 
+        self.data_dir = args.data_dir
+
 
 
         self.file_name = f"{self.dataset}_{self.algorithm}_nc={self.num_clients}_jr={self.join_ratio}_{self.test_id}" 
 
     def set_clients(self, args, clientObj):
         for i, train_slow, send_slow in zip(range(self.num_clients), self.train_slow_clients, self.send_slow_clients):
-            train_data = read_client_data(self.dataset, i, is_train=True)
-            test_data = read_client_data(self.dataset, i, is_train=False)
+            train_data = read_client_data(self.dataset, i, is_train=True, data_dir=self.data_dir)
+            test_data = read_client_data(self.dataset, i, is_train=False, data_dir=self.data_dir)
             client = clientObj(args, 
                             id=i, 
                             train_samples=len(train_data), 
@@ -148,6 +150,7 @@ class Server2(object):
         # self.global_model = copy.deepcopy(self.uploaded_models[0])
         for param in self.global_model.parameters():
             param.data.zero_()
+
 
         for i in self.selected_client_ids:
             self.add_parameters(self.client_weights[i], self.client_models[i])
@@ -238,6 +241,7 @@ class Server2(object):
         train_loss = sum(stats_train[2])*1.0 / sum(stats_train[1])
         accs = [a / n for a, n in zip(stats[2], stats[1])]
         aucs = [a / n for a, n in zip(stats[3], stats[1])]
+
         
         if acc == None:
             self.rs_test_acc.append(test_acc)
@@ -255,6 +259,7 @@ class Server2(object):
         # self.print_(test_acc, train_acc, train_loss)
         print("Std Test Accuracy: {:.4f}".format(np.std(accs)))
         print("Std Test AUC: {:.4f}".format(np.std(aucs)))
+
 
     def print_(self, test_acc, test_auc, train_loss):
         print("Average Test Accuracy: {:.4f}".format(test_acc))

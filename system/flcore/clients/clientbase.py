@@ -45,17 +45,19 @@ class Client(object):
         self.dp_sigma = args.dp_sigma
         self.sample_rate = self.batch_size / self.train_samples
 
+        self.data_dir = args.data_dir
+
 
     def load_train_data(self, batch_size=None):
         if batch_size == None:
             batch_size = self.batch_size
-        train_data = read_client_data(self.dataset, self.id, is_train=True)
-        return DataLoader(train_data, batch_size, drop_last=True, shuffle=False)
+        train_data = read_client_data(self.dataset, self.id, is_train=True, data_dir=self.data_dir)
+        return DataLoader(train_data, batch_size, drop_last=True, shuffle=True)
 
     def load_test_data(self, batch_size=None):
         if batch_size == None:
             batch_size = self.batch_size
-        test_data = read_client_data(self.dataset, self.id, is_train=False)
+        test_data = read_client_data(self.dataset, self.id, is_train=False, data_dir=self.data_dir)
         return DataLoader(test_data, batch_size, drop_last=False, shuffle=False)
         
     def set_parameters(self, model):
