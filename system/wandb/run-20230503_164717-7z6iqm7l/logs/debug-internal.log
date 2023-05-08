@@ -1,0 +1,303 @@
+2023-05-03 16:47:17,525 INFO    StreamThr :3651792 [internal.py:wandb_internal():86] W&B internal server running at pid: 3651792, started at: 2023-05-03 16:47:17.524373
+2023-05-03 16:47:17,526 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status
+2023-05-03 16:47:17,528 INFO    WriterThread:3651792 [datastore.py:open_for_write():85] open: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/run-7z6iqm7l.wandb
+2023-05-03 16:47:17,530 DEBUG   SenderThread:3651792 [sender.py:send():375] send: header
+2023-05-03 16:47:17,546 DEBUG   SenderThread:3651792 [sender.py:send():375] send: run
+2023-05-03 16:47:18,139 INFO    SenderThread:3651792 [dir_watcher.py:__init__():219] watching files in: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files
+2023-05-03 16:47:18,139 INFO    SenderThread:3651792 [sender.py:_start_run_threads():1124] run started: 7z6iqm7l with start time 1683100037.523703
+2023-05-03 16:47:18,139 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: summary_record
+2023-05-03 16:47:18,139 INFO    SenderThread:3651792 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-03 16:47:18,142 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: check_version
+2023-05-03 16:47:18,143 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: check_version
+2023-05-03 16:47:18,239 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: run_start
+2023-05-03 16:47:18,245 DEBUG   HandlerThread:3651792 [system_info.py:__init__():31] System info init
+2023-05-03 16:47:18,245 DEBUG   HandlerThread:3651792 [system_info.py:__init__():46] System info init done
+2023-05-03 16:47:18,245 INFO    HandlerThread:3651792 [system_monitor.py:start():181] Starting system monitor
+2023-05-03 16:47:18,246 INFO    SystemMonitor:3651792 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-05-03 16:47:18,246 INFO    HandlerThread:3651792 [system_monitor.py:probe():201] Collecting system info
+2023-05-03 16:47:18,247 INFO    SystemMonitor:3651792 [interfaces.py:start():190] Started cpu monitoring
+2023-05-03 16:47:18,248 INFO    SystemMonitor:3651792 [interfaces.py:start():190] Started disk monitoring
+2023-05-03 16:47:18,249 INFO    SystemMonitor:3651792 [interfaces.py:start():190] Started gpu monitoring
+2023-05-03 16:47:18,250 INFO    SystemMonitor:3651792 [interfaces.py:start():190] Started memory monitoring
+2023-05-03 16:47:18,251 INFO    SystemMonitor:3651792 [interfaces.py:start():190] Started network monitoring
+2023-05-03 16:47:18,310 DEBUG   HandlerThread:3651792 [system_info.py:probe():195] Probing system
+2023-05-03 16:47:18,311 DEBUG   HandlerThread:3651792 [system_info.py:_probe_git():180] Probing git
+2023-05-03 16:47:18,323 DEBUG   HandlerThread:3651792 [system_info.py:_probe_git():188] Probing git done
+2023-05-03 16:47:18,324 DEBUG   HandlerThread:3651792 [system_info.py:probe():240] Probing system done
+2023-05-03 16:47:18,324 DEBUG   HandlerThread:3651792 [system_monitor.py:probe():210] {'os': 'Linux-5.13.0-37-generic-x86_64-with-glibc2.31', 'python': '3.9.16', 'heartbeatAt': '2023-05-03T07:47:18.310626', 'startedAt': '2023-05-03T07:47:17.515093', 'docker': None, 'cuda': None, 'args': ('-nc', '1', '-data', 'Cifar10', '-m', 'cnn', '-algo', 'FedMGDA', '-gr', '20', '-jr', '1', '-bt', '0.5', '-rh', '1', '-did', '7', '-go', 'cnn', '-fr', '0', '-tid', '90001', '-cdn', '10', '-dd', 'Cifar10_central'), 'state': 'running', 'program': '/home/kjb/moofl/fedmoco/system/main.py', 'codePath': 'system/main.py', 'git': {'remote': 'https://github.com/wkqls0829/fedmoco.git', 'commit': 'fe24e3cde6704d121c0a084d507a783c75b2736d'}, 'email': 'jbkoo@postech.ac.kr', 'root': '/home/kjb/moofl/fedmoco', 'host': 'ml6', 'username': 'kjb', 'executable': '/home/kjb/.conda/envs/pflniid/bin/python', 'cpu_count': 48, 'cpu_count_logical': 48, 'cpu_freq': {'current': 1681.4777291666667, 'min': 1500.0, 'max': 2850.0}, 'cpu_freq_per_core': [{'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2100.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1880.758, 'min': 1500.0, 'max': 2850.0}, {'current': 1506.64, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2100.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2100.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2100.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2850.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2850.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2100.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}], 'disk': {'total': 1694.9992179870605, 'used': 1049.7434005737305}, 'gpu': 'NVIDIA RTX A5000', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}], 'memory': {'total': 377.75384521484375}}
+2023-05-03 16:47:18,324 INFO    HandlerThread:3651792 [system_monitor.py:probe():211] Finished collecting system info
+2023-05-03 16:47:18,324 INFO    HandlerThread:3651792 [system_monitor.py:probe():214] Publishing system info
+2023-05-03 16:47:18,324 DEBUG   HandlerThread:3651792 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-05-03 16:47:18,324 DEBUG   HandlerThread:3651792 [system_info.py:_save_pip():67] Saving pip packages done
+2023-05-03 16:47:18,324 DEBUG   HandlerThread:3651792 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-05-03 16:47:19,141 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_created():278] file/dir created: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/requirements.txt
+2023-05-03 16:47:19,142 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_created():278] file/dir created: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/conda-environment.yaml
+2023-05-03 16:47:19,142 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_created():278] file/dir created: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/wandb-summary.json
+2023-05-03 16:47:20,824 DEBUG   HandlerThread:3651792 [system_info.py:_save_conda():86] Saving conda packages done
+2023-05-03 16:47:20,825 INFO    HandlerThread:3651792 [system_monitor.py:probe():216] Finished publishing system info
+2023-05-03 16:47:20,827 DEBUG   SenderThread:3651792 [sender.py:send():375] send: files
+2023-05-03 16:47:20,827 INFO    SenderThread:3651792 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-05-03 16:47:20,834 DEBUG   SenderThread:3651792 [sender.py:send():375] send: telemetry
+2023-05-03 16:47:20,840 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:47:20,841 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:47:21,143 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/conda-environment.yaml
+2023-05-03 16:47:21,143 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_created():278] file/dir created: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/wandb-metadata.json
+2023-05-03 16:47:21,387 DEBUG   SenderThread:3651792 [sender.py:send():375] send: config
+2023-05-03 16:47:22,017 INFO    wandb-upload_0:3651792 [upload_job.py:push():137] Uploaded file /tmp/tmp8w9s6cbjwandb/kmdthyvx-wandb-metadata.json
+2023-05-03 16:47:22,143 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_created():278] file/dir created: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:47:22,291 DEBUG   SenderThread:3651792 [sender.py:send():375] send: telemetry
+2023-05-03 16:47:23,293 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:47:24,144 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:47:26,144 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:47:29,055 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:47:30,146 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:47:34,056 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:47:35,833 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:47:35,834 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:47:38,149 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:47:40,000 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:47:40,149 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:47:45,974 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:47:48,152 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:47:50,834 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:47:50,834 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:47:51,147 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:47:52,153 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/config.yaml
+2023-05-03 16:47:56,154 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:47:56,513 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:47:58,155 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:48:01,514 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:48:05,834 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:48:05,835 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:48:06,157 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:48:07,135 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:48:08,158 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:48:12,137 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:48:16,161 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:48:17,678 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:48:18,162 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:48:18,252 DEBUG   SystemMonitor:3651792 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-05-03 16:48:18,255 DEBUG   SenderThread:3651792 [sender.py:send():375] send: stats
+2023-05-03 16:48:20,834 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:48:20,834 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:48:23,106 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:48:24,164 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:48:26,165 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:48:29,016 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:48:34,114 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:48:34,167 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:48:35,834 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:48:35,835 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:48:36,168 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:48:40,075 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:48:44,170 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:48:45,491 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:48:46,171 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:48:48,257 DEBUG   SenderThread:3651792 [sender.py:send():375] send: stats
+2023-05-03 16:48:50,835 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:48:50,836 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:48:51,123 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:48:54,174 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:48:56,175 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:48:56,457 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:49:01,458 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:49:04,178 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:49:05,834 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:49:05,835 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:49:06,178 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:49:07,062 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:49:12,978 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:49:14,181 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:49:16,182 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:49:18,259 DEBUG   SenderThread:3651792 [sender.py:send():375] send: stats
+2023-05-03 16:49:18,260 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:49:20,834 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:49:20,835 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:49:23,654 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:49:24,185 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:49:26,186 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:49:28,671 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:49:32,188 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:49:34,025 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:49:34,189 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:49:35,835 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:49:35,836 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:49:39,106 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:49:42,191 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:49:44,192 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:49:44,224 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:49:48,261 DEBUG   SenderThread:3651792 [sender.py:send():375] send: stats
+2023-05-03 16:49:49,262 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:49:50,835 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:49:50,836 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:49:52,194 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:49:54,195 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:49:54,792 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:49:59,793 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:50:02,197 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:50:04,198 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:50:04,897 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:50:05,835 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:50:05,836 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:50:10,144 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:50:12,201 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:50:14,202 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:50:15,211 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:50:18,262 DEBUG   SenderThread:3651792 [sender.py:send():375] send: stats
+2023-05-03 16:50:20,836 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:50:20,837 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:50:21,131 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:50:22,205 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:50:24,205 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:50:26,805 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:50:30,207 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:50:32,208 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:50:32,313 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:50:35,836 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:50:35,837 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:50:38,063 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:50:40,211 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:50:42,212 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:50:43,578 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:50:48,264 DEBUG   SenderThread:3651792 [sender.py:send():375] send: stats
+2023-05-03 16:50:49,265 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:50:50,214 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:50:50,254 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-03 16:50:50,257 DEBUG   SenderThread:3651792 [sender.py:send():375] send: history
+2023-05-03 16:50:50,258 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: summary_record
+2023-05-03 16:50:50,259 INFO    SenderThread:3651792 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-03 16:50:50,861 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-03 16:50:50,861 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: stop_status
+2023-05-03 16:50:51,066 DEBUG   SenderThread:3651792 [sender.py:send():375] send: exit
+2023-05-03 16:50:51,066 INFO    SenderThread:3651792 [sender.py:send_exit():598] handling exit code: 0
+2023-05-03 16:50:51,067 INFO    SenderThread:3651792 [sender.py:send_exit():600] handling runtime: 212
+2023-05-03 16:50:51,068 INFO    SenderThread:3651792 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-03 16:50:51,068 INFO    SenderThread:3651792 [sender.py:send_exit():606] send defer
+2023-05-03 16:50:51,068 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:51,069 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 0
+2023-05-03 16:50:51,069 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:51,069 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-05-03 16:50:51,069 INFO    SenderThread:3651792 [sender.py:transition_state():626] send defer: 1
+2023-05-03 16:50:51,070 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:51,070 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 1
+2023-05-03 16:50:51,070 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:51,070 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-05-03 16:50:51,070 INFO    SenderThread:3651792 [sender.py:transition_state():626] send defer: 2
+2023-05-03 16:50:51,071 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:51,071 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 2
+2023-05-03 16:50:51,071 INFO    HandlerThread:3651792 [system_monitor.py:finish():190] Stopping system monitor
+2023-05-03 16:50:51,072 DEBUG   SystemMonitor:3651792 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-05-03 16:50:51,072 DEBUG   SystemMonitor:3651792 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-05-03 16:50:51,073 INFO    HandlerThread:3651792 [interfaces.py:finish():202] Joined cpu monitor
+2023-05-03 16:50:51,073 INFO    HandlerThread:3651792 [interfaces.py:finish():202] Joined disk monitor
+2023-05-03 16:50:51,215 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/wandb-summary.json
+2023-05-03 16:50:51,321 INFO    HandlerThread:3651792 [interfaces.py:finish():202] Joined gpu monitor
+2023-05-03 16:50:51,321 INFO    HandlerThread:3651792 [interfaces.py:finish():202] Joined memory monitor
+2023-05-03 16:50:51,321 INFO    HandlerThread:3651792 [interfaces.py:finish():202] Joined network monitor
+2023-05-03 16:50:51,322 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:51,322 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-05-03 16:50:51,322 INFO    SenderThread:3651792 [sender.py:transition_state():626] send defer: 3
+2023-05-03 16:50:51,322 DEBUG   SenderThread:3651792 [sender.py:send():375] send: stats
+2023-05-03 16:50:51,323 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:51,323 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 3
+2023-05-03 16:50:51,324 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:51,324 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-05-03 16:50:51,324 INFO    SenderThread:3651792 [sender.py:transition_state():626] send defer: 4
+2023-05-03 16:50:51,324 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:51,324 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 4
+2023-05-03 16:50:51,325 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:51,325 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-05-03 16:50:51,325 INFO    SenderThread:3651792 [sender.py:transition_state():626] send defer: 5
+2023-05-03 16:50:51,325 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:51,326 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 5
+2023-05-03 16:50:51,326 DEBUG   SenderThread:3651792 [sender.py:send():375] send: summary
+2023-05-03 16:50:51,327 INFO    SenderThread:3651792 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-03 16:50:51,327 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:51,327 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-05-03 16:50:51,327 INFO    SenderThread:3651792 [sender.py:transition_state():626] send defer: 6
+2023-05-03 16:50:51,327 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:51,328 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 6
+2023-05-03 16:50:51,328 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:51,328 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-05-03 16:50:51,328 INFO    SenderThread:3651792 [sender.py:transition_state():626] send defer: 7
+2023-05-03 16:50:51,329 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: status_report
+2023-05-03 16:50:51,329 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:51,329 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 7
+2023-05-03 16:50:51,329 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:51,329 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-05-03 16:50:51,699 INFO    SenderThread:3651792 [sender.py:transition_state():626] send defer: 8
+2023-05-03 16:50:51,699 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:51,699 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 8
+2023-05-03 16:50:51,700 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:51,700 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-05-03 16:50:51,707 INFO    SenderThread:3651792 [sender.py:transition_state():626] send defer: 9
+2023-05-03 16:50:51,707 DEBUG   SenderThread:3651792 [sender.py:send():375] send: artifact
+2023-05-03 16:50:51,709 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:51,710 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 9
+2023-05-03 16:50:52,026 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-03 16:50:52,215 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:50:52,216 INFO    Thread-12 :3651792 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/wandb-summary.json
+2023-05-03 16:50:53,060 INFO    wandb-upload_1:3651792 [upload_job.py:push():92] Skipped uploading /home/kjb/.local/share/wandb/artifacts/staging/tmpfdnggio5
+2023-05-03 16:50:53,681 INFO    wandb-upload_0:3651792 [upload_job.py:push():95] Uploaded file /home/kjb/.local/share/wandb/artifacts/staging/tmp0rb1ojjj
+2023-05-03 16:50:55,256 INFO    SenderThread:3651792 [sender.py:send_artifact():1474] sent artifact job-https___github.com_wkqls0829_fedmoco.git_system_main.py - {'id': 'QXJ0aWZhY3Q6NDQwMjUxNzY1', 'digest': '5bc8653a961a9f728da1f8c1c658f587', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjY2MjE2MTEw', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDQwMjQ3NTY5', 'versionIndex': 5}}, 'version': 'latest'}
+2023-05-03 16:50:55,256 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:55,256 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 9
+2023-05-03 16:50:55,256 INFO    SenderThread:3651792 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-05-03 16:50:56,217 INFO    SenderThread:3651792 [dir_watcher.py:finish():395] scan: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files
+2023-05-03 16:50:56,218 INFO    SenderThread:3651792 [dir_watcher.py:finish():409] scan save: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log output.log
+2023-05-03 16:50:56,218 INFO    SenderThread:3651792 [dir_watcher.py:finish():409] scan save: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/config.yaml config.yaml
+2023-05-03 16:50:56,218 INFO    SenderThread:3651792 [dir_watcher.py:finish():409] scan save: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/conda-environment.yaml conda-environment.yaml
+2023-05-03 16:50:56,221 INFO    SenderThread:3651792 [dir_watcher.py:finish():409] scan save: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/requirements.txt requirements.txt
+2023-05-03 16:50:56,221 INFO    SenderThread:3651792 [dir_watcher.py:finish():409] scan save: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/wandb-summary.json wandb-summary.json
+2023-05-03 16:50:56,221 INFO    SenderThread:3651792 [dir_watcher.py:finish():409] scan save: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/wandb-metadata.json wandb-metadata.json
+2023-05-03 16:50:56,221 INFO    SenderThread:3651792 [sender.py:transition_state():626] send defer: 10
+2023-05-03 16:50:56,222 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: poll_exit
+2023-05-03 16:50:56,226 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:56,226 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 10
+2023-05-03 16:50:56,235 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:56,235 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 10
+2023-05-03 16:50:56,235 INFO    SenderThread:3651792 [file_pusher.py:finish():167] shutting down file pusher
+2023-05-03 16:50:56,830 INFO    wandb-upload_0:3651792 [upload_job.py:push():137] Uploaded file /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/config.yaml
+2023-05-03 16:50:57,028 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: keepalive
+2023-05-03 16:50:57,048 INFO    wandb-upload_1:3651792 [upload_job.py:push():137] Uploaded file /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/output.log
+2023-05-03 16:50:57,147 INFO    wandb-upload_3:3651792 [upload_job.py:push():137] Uploaded file /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/requirements.txt
+2023-05-03 16:50:57,151 INFO    wandb-upload_2:3651792 [upload_job.py:push():137] Uploaded file /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/conda-environment.yaml
+2023-05-03 16:50:57,220 INFO    wandb-upload_4:3651792 [upload_job.py:push():137] Uploaded file /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/files/wandb-summary.json
+2023-05-03 16:50:57,420 INFO    Thread-11 :3651792 [sender.py:transition_state():626] send defer: 11
+2023-05-03 16:50:57,421 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:57,421 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 11
+2023-05-03 16:50:57,422 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:57,422 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 11
+2023-05-03 16:50:57,422 INFO    SenderThread:3651792 [file_pusher.py:join():172] waiting for file pusher
+2023-05-03 16:50:57,422 INFO    SenderThread:3651792 [sender.py:transition_state():626] send defer: 12
+2023-05-03 16:50:57,423 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:57,423 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 12
+2023-05-03 16:50:57,423 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:57,423 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 12
+2023-05-03 16:50:58,330 INFO    SenderThread:3651792 [sender.py:transition_state():626] send defer: 13
+2023-05-03 16:50:58,330 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:58,331 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 13
+2023-05-03 16:50:58,331 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:58,331 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 13
+2023-05-03 16:50:58,331 INFO    SenderThread:3651792 [sender.py:transition_state():626] send defer: 14
+2023-05-03 16:50:58,331 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: defer
+2023-05-03 16:50:58,332 INFO    HandlerThread:3651792 [handler.py:handle_request_defer():170] handle defer: 14
+2023-05-03 16:50:58,332 DEBUG   SenderThread:3651792 [sender.py:send():375] send: final
+2023-05-03 16:50:58,332 DEBUG   SenderThread:3651792 [sender.py:send():375] send: footer
+2023-05-03 16:50:58,332 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: defer
+2023-05-03 16:50:58,332 INFO    SenderThread:3651792 [sender.py:send_request_defer():622] handle sender defer: 14
+2023-05-03 16:50:58,333 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-03 16:50:58,333 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: poll_exit
+2023-05-03 16:50:58,334 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: server_info
+2023-05-03 16:50:58,335 DEBUG   SenderThread:3651792 [sender.py:send_request():402] send_request: server_info
+2023-05-03 16:50:58,337 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: get_summary
+2023-05-03 16:50:58,338 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: sampled_history
+2023-05-03 16:50:58,610 INFO    MainThread:3651792 [wandb_run.py:_footer_history_summary_info():3469] rendering history
+2023-05-03 16:50:58,610 INFO    MainThread:3651792 [wandb_run.py:_footer_history_summary_info():3501] rendering summary
+2023-05-03 16:50:58,610 INFO    MainThread:3651792 [wandb_run.py:_footer_sync_info():3428] logging synced files
+2023-05-03 16:50:58,611 DEBUG   HandlerThread:3651792 [handler.py:handle_request():144] handle_request: shutdown
+2023-05-03 16:50:58,611 INFO    HandlerThread:3651792 [handler.py:finish():845] shutting down handler
+2023-05-03 16:50:59,335 INFO    WriterThread:3651792 [datastore.py:close():298] close: /home/kjb/moofl/fedmoco/system/wandb/run-20230503_164717-7z6iqm7l/run-7z6iqm7l.wandb
+2023-05-03 16:50:59,610 INFO    SenderThread:3651792 [sender.py:finish():1550] shutting down sender
+2023-05-03 16:50:59,610 INFO    SenderThread:3651792 [file_pusher.py:finish():167] shutting down file pusher
+2023-05-03 16:50:59,610 INFO    SenderThread:3651792 [file_pusher.py:join():172] waiting for file pusher

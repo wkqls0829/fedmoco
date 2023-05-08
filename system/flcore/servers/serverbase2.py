@@ -5,6 +5,7 @@ import h5py
 import copy
 import time
 import random
+import wandb
 
 from utils.data_utils import read_client_data
 
@@ -19,6 +20,8 @@ class Server2(object):
         self.batch_size = args.batch_size
         self.learning_rate = args.local_learning_rate
         self.global_model = copy.deepcopy(args.model)
+        wandb.watch(self.global_model)
+        self.client_models = [self.global_model for i in range(args.num_clients)]
         self.num_clients = args.num_clients
         self.join_ratio = args.join_ratio
         self.random_join_ratio = args.random_join_ratio
@@ -44,14 +47,15 @@ class Server2(object):
 
         self.client_weights = [0 for i in range(self.num_clients)]
         self.rs_weights = []
-        self.client_models = [self.global_model for i in range(self.num_clients)]
 
         self.local_losses = [0 for i in range(self.num_clients)]
 
-        self.rs_test_acc = []
+        self.rs_avg_test_acc = []
         self.rs_test_auc = []
-        self.rs_train_loss = []
+        self.rs_avg_train_loss = []
         self.rs_local_train_losses = []
+        self.rs_local_test_accs = []
+
 
         self.times = times
         self.eval_gap = args.eval_gap
@@ -60,8 +64,6 @@ class Server2(object):
         self.send_slow_rate = args.send_slow_rate
 
         self.data_dir = args.data_dir
-
-
 
         self.file_name = f"{self.dataset}_{self.algorithm}_nc={self.num_clients}_jr={self.join_ratio}_{self.test_id}" 
 
@@ -185,17 +187,19 @@ class Server2(object):
         if not os.path.exists(result_path):
             os.makedirs(result_path)
 
-        if (len(self.rs_test_acc)):
+        if (len(self.rs_avg_test_acc)):
             algo = algo + "_" + self.goal + "_" + str(self.times)
             file_path = result_path + self.file_name + ".h5"
             print("File path: " + file_path)
 
+
             with h5py.File(file_path, 'w') as hf:
-                hf.create_dataset('rs_test_acc', data=self.rs_test_acc)
-                hf.create_dataset('rs_test_auc', data=self.rs_test_auc)
-                hf.create_dataset('rs_train_loss', data=self.rs_train_loss)
+                hf.create_dataset('rs_avg_test_acc', data=self.rs_avg_test_acc)
+                # hf.create_dataset('rs_test_auc', data=self.rs_test_auc)
+                hf.create_dataset('rs_avg_train_loss', data=self.rs_avg_train_loss)
                 hf.create_dataset('rs_weights', data=self.rs_weights)
                 hf.create_dataset('rs_local_train_losses', data=self.rs_local_train_losses)
+                hf.create_dataset('rs_local_test_accs', data=self.rs_local_test_accs)
 
     def save_item(self, item, item_name):
         if not os.path.exists(self.save_folder_name):
@@ -234,31 +238,39 @@ class Server2(object):
     # evaluate selected clients
     def evaluate(self, acc=None, loss=None):
         stats = self.test_metrics()
-        stats_train = self.train_metrics()
+        # stats_train = self.train_metrics()
 
         test_acc = sum(stats[2])*1.0 / sum(stats[1])
-        test_auc = sum(stats[3])*1.0 / sum(stats[1])
-        train_loss = sum(stats_train[2])*1.0 / sum(stats_train[1])
+        # test_auc = sum(stats[3])*1.0 / sum(stats[1])
+        # train_loss = sum(stats_train[2])*1.0 / sum(stats_train[1])
+        print(stats[2])
+        print(stats[1])
         accs = [a / n for a, n in zip(stats[2], stats[1])]
-        aucs = [a / n for a, n in zip(stats[3], stats[1])]
+        # aucs = [a / n for a, n in zip(stats[3], stats[1])]
 
+        self.rs_avg_test_acc.append(test_acc)
+        self.rs_local_test_accs.append(accs)
+
+        train_loss = self.rs_avg_train_loss[-1]
         
-        if acc == None:
-            self.rs_test_acc.append(test_acc)
-        else:
-            acc.append(test_acc)
+        # if acc == None:
+            # self.rs_test_acc.append(test_acc)
+        # else:
+            # acc.append(test_acc)
         
-        if loss == None:
-            self.rs_train_loss.append(train_loss)
-        else:
-            loss.append(train_loss)
+        # if loss == None:
+            # self.rs_train_loss.append(train_loss)
+        # else:
+            # loss.append(train_loss)
+
+        wandb.log({"avg_train_loss": train_loss, "test_acc": test_acc})
 
         print("Averaged Train Loss: {:.4f}".format(train_loss))
         print("Averaged Test Accuracy: {:.4f}".format(test_acc))
-        print("Averaged Test AUC: {:.4f}".format(test_auc))
+        # print("Averaged Test AUC: {:.4f}".format(test_auc))
         # self.print_(test_acc, train_acc, train_loss)
-        print("Std Test Accuracy: {:.4f}".format(np.std(accs)))
-        print("Std Test AUC: {:.4f}".format(np.std(aucs)))
+        # print("Std Test Accuracy: {:.4f}".format(np.std(accs)))
+        # print("Std Test AUC: {:.4f}".format(np.std(aucs)))
 
 
     def print_(self, test_acc, test_auc, train_loss):

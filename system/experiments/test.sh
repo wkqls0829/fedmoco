@@ -1,8 +1,9 @@
 #!/bin/bash
 
-nohup python -u main.py -nc 1 -data Cifar10 -m cnn -algo FedMGDA -gr 20 -jr 1 -bt 0.5 -rh 1 -did 7 -go cnn -fr 0 -tid 90001 -cdn 10 -dd Cifar10_central > test1.out 2>&1 &
-nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedCentral -gr 20 -jr 1 -bt 0.5 -rh 1 -did 7 -go cnn -fr 0 -tid 90002 -cdn 1 -cdd Cifar10_central > test2.out 2>&1 &
-nohup python -u main.py -nc 1 -data Cifar10 -m cnn -algo FedCentral -gr 20 -jr 1 -bt 0.5 -rh 1 -did 7 -go cnn -fr 0 -tid 90002 -cdn 1 -dd Cifar10_central -cdd Cifar10_central > test3.out 2>&1 &
+nohup python -u main.py -nc 1 -data Cifar10 -m cnn -algo FedMGDA -gr 10 -jr 1 -bt 0.5 -rh 1 -did 7 -go cnn -fr 0 -tid 90001 -cdn 10 -dd Cifar10_central > test1.out 2>&1 &
+nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedCentral -gr 10 -jr 1 -bt 0.5 -rh 1 -did 7 -go cnn -fr 0 -tid 90002 -cdn 1 -cdd Cifar10_central > test2.out 2>&1 &
+nohup python -u main.py -nc 1 -data Cifar10 -m cnn -algo FedCentral -gr 10 -jr 1 -bt 0.5 -rh 1 -did 6 -go cnn -fr 0 -tid 90003 -cdn 1 -dd Cifar10_central -cdd Cifar10_central > test3.out 2>&1 &
+nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedCentral -gr 10 -jr 1 -bt 0.5 -rh 1 -did 6 -go cnn -fr 0 -tid 90004 -cdn 1 -dd Cifar10_iid -cdd Cifar10_central > test4.out 2>&1 &
 # nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedMGDA -gr 1000 -rh 0.1  -did 5 -go cnn -fr 0 -bt 1 -tid 10021 > outputs/cifar10_fedavg_10_10021.out 2>&1 &
 
 # nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedMoCo -gr 1000 -rh 0.1  -did 6 -go cnn -fr 2000 -bt 0.5 -tid 30021 > outputs/cifar10_fedmoco_10_30021.out 2>&1 &

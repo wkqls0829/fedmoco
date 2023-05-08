@@ -1,0 +1,203 @@
+
+wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+==================================================
+Algorithm: FedCentral
+Local batch size: 10
+Local steps: 1
+Local learing rate: 0.005
+Total number of clients: 1
+Clients join in each round: 1.0
+Client drop rate: 0.0
+Time select: False
+Time threthold: 10000
+Global rounds: 10
+Running times: 1
+Dataset: Cifar10
+Local model: cnn
+Using device: cuda
+Cuda device id: 7
+==================================================
+============= Running time: 0th =============
+Creating server and clients ...
+FedAvgCNN(
+  (conv1): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  )
+  (fc1): Sequential(
+    (0): Linear(in_features=1600, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+  )
+  (fc): Linear(in_features=512, out_features=10, bias=True)
+)
+Cifar10_central
+Cifar10_central
+Join ratio / total clients: 1.0 / 1
+Finished creating server and clients.
+Cifar10_central
+1
+-------------Round number: 0-------------
+Evaluate global model
+[1413.0]
+[15000]
+Averaged Train Loss: 10.0000
+Averaged Test Accuracy: 0.0942
+-------------Round number: 0-------------
+Evaluate global model
+[6655.0]
+[15000]
+Averaged Train Loss: 1.7896
+Averaged Test Accuracy: 0.4437
+------------------------- time cost ------------------------- 20.913373231887817
+-------------Round number: 1-------------
+Evaluate global model
+[6655.0]
+[15000]
+Averaged Train Loss: 1.7896
+Averaged Test Accuracy: 0.4437
+-------------Round number: 1-------------
+Evaluate global model
+[7817.0]
+[15000]
+Averaged Train Loss: 1.3966
+Averaged Test Accuracy: 0.5211
+------------------------- time cost ------------------------- 18.982681274414062
+-------------Round number: 2-------------
+Evaluate global model
+[7817.0]
+[15000]
+Averaged Train Loss: 1.3966
+Averaged Test Accuracy: 0.5211
+-------------Round number: 2-------------
+Evaluate global model
+[8879.0]
+[15000]
+Averaged Train Loss: 1.2138
+Averaged Test Accuracy: 0.5919
+------------------------- time cost ------------------------- 18.80672526359558
+-------------Round number: 3-------------
+Evaluate global model
+[8879.0]
+[15000]
+Averaged Train Loss: 1.2138
+Averaged Test Accuracy: 0.5919
+-------------Round number: 3-------------
+Evaluate global model
+[9335.0]
+[15000]
+Averaged Train Loss: 1.0746
+Averaged Test Accuracy: 0.6223
+------------------------- time cost ------------------------- 19.38023018836975
+-------------Round number: 4-------------
+Evaluate global model
+[9335.0]
+[15000]
+Averaged Train Loss: 1.0746
+Averaged Test Accuracy: 0.6223
+-------------Round number: 4-------------
+Evaluate global model
+[9764.0]
+[15000]
+Averaged Train Loss: 0.9682
+Averaged Test Accuracy: 0.6509
+------------------------- time cost ------------------------- 18.988112211227417
+-------------Round number: 5-------------
+Evaluate global model
+[9764.0]
+[15000]
+Averaged Train Loss: 0.9682
+Averaged Test Accuracy: 0.6509
+-------------Round number: 5-------------
+Evaluate global model
+[10133.0]
+[15000]
+Averaged Train Loss: 0.8781
+Averaged Test Accuracy: 0.6755
+------------------------- time cost ------------------------- 16.9788818359375
+-------------Round number: 6-------------
+Evaluate global model
+[10133.0]
+[15000]
+Averaged Train Loss: 0.8781
+Averaged Test Accuracy: 0.6755
+-------------Round number: 6-------------
+Evaluate global model
+[10514.0]
+[15000]
+Averaged Train Loss: 0.7953
+Averaged Test Accuracy: 0.7009
+------------------------- time cost ------------------------- 15.797699451446533
+-------------Round number: 7-------------
+Evaluate global model
+[10514.0]
+[15000]
+Averaged Train Loss: 0.7953
+Averaged Test Accuracy: 0.7009
+-------------Round number: 7-------------
+Evaluate global model
+[10537.0]
+[15000]
+Averaged Train Loss: 0.7177
+Averaged Test Accuracy: 0.7025
+------------------------- time cost ------------------------- 15.993054151535034
+-------------Round number: 8-------------
+Evaluate global model
+[10537.0]
+[15000]
+Averaged Train Loss: 0.7177
+Averaged Test Accuracy: 0.7025
+-------------Round number: 8-------------
+Evaluate global model
+[10615.0]
+[15000]
+Averaged Train Loss: 0.6473
+Averaged Test Accuracy: 0.7077
+------------------------- time cost ------------------------- 16.13142704963684
+-------------Round number: 9-------------
+Evaluate global model
+[10615.0]
+[15000]
+Averaged Train Loss: 0.6473
+Averaged Test Accuracy: 0.7077
+-------------Round number: 9-------------
+Evaluate global model
+[10835.0]
+[15000]
+Averaged Train Loss: 0.5796
+Averaged Test Accuracy: 0.7223
+------------------------- time cost ------------------------- 16.145039081573486
+-------------Round number: 10-------------
+Evaluate global model
+[10835.0]
+[15000]
+Averaged Train Loss: 0.5796
+Averaged Test Accuracy: 0.7223
+-------------Round number: 10-------------
+Evaluate global model
+[10863.0]
+[15000]
+Averaged Train Loss: 0.5124
+Averaged Test Accuracy: 0.7242
+------------------------- time cost ------------------------- 16.28840136528015
+Best accuracy.
+0.7242
+Average time cost per round.
+17.349225187301634
+File path: ../results/Cifar10_FedCentral_nc=1_jr=1.0_90003.h5
+Average time cost: 203.01s.
+All done!
+Storage on cuda:0
+-------------------------------------------------------------------------------
+Total Tensors: 6149766 	Used Memory: 16.76M
+The allocated memory on cuda:0: 16.76M
+-------------------------------------------------------------------------------
+Storage on cpu
+-------------------------------------------------------------------------------
+Total Tensors: 737520000 	Used Memory: 1.37G
+-------------------------------------------------------------------------------

@@ -1,0 +1,159 @@
+==================================================
+Algorithm: FedMGDA
+Local batch size: 10
+Local steps: 1
+Local learing rate: 0.005
+Total number of clients: 1
+Clients join in each round: 1.0
+Client drop rate: 0.0
+Time select: False
+Time threthold: 10000
+Global rounds: 20
+Running times: 1
+Dataset: Cifar10
+Local model: cnn
+Using device: cuda
+Cuda device id: 7
+==================================================
+============= Running time: 0th =============
+Creating server and clients ...
+FedAvgCNN(
+  (conv1): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  )
+  (fc1): Sequential(
+    (0): Linear(in_features=1600, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+  )
+  (fc): Linear(in_features=512, out_features=10, bias=True)
+)
+Cifar10_central
+Cifar10_central
+Join ratio / total clients: 1.0 / 1
+Finished creating server and clients.
+-------------Round number: 0-------------
+Evaluate global model
+Averaged Train Loss: 1.7895
+Averaged Test Accuracy: 0.4581
+------------------------- time cost ------------------------- 9.0018949508667
+-------------Round number: 1-------------
+Evaluate global model
+Averaged Train Loss: 1.3933
+Averaged Test Accuracy: 0.5153
+------------------------- time cost ------------------------- 7.834590196609497
+-------------Round number: 2-------------
+Evaluate global model
+Averaged Train Loss: 1.2153
+Averaged Test Accuracy: 0.5923
+------------------------- time cost ------------------------- 7.961921691894531
+-------------Round number: 3-------------
+Evaluate global model
+Averaged Train Loss: 1.0715
+Averaged Test Accuracy: 0.6235
+------------------------- time cost ------------------------- 7.613422870635986
+-------------Round number: 4-------------
+Evaluate global model
+Averaged Train Loss: 0.9653
+Averaged Test Accuracy: 0.6587
+------------------------- time cost ------------------------- 8.04367184638977
+-------------Round number: 5-------------
+Evaluate global model
+Averaged Train Loss: 0.8767
+Averaged Test Accuracy: 0.6728
+------------------------- time cost ------------------------- 7.374708890914917
+-------------Round number: 6-------------
+Evaluate global model
+Averaged Train Loss: 0.7947
+Averaged Test Accuracy: 0.6871
+------------------------- time cost ------------------------- 8.012404441833496
+-------------Round number: 7-------------
+Evaluate global model
+Averaged Train Loss: 0.7196
+Averaged Test Accuracy: 0.6993
+------------------------- time cost ------------------------- 7.740302801132202
+-------------Round number: 8-------------
+Evaluate global model
+Averaged Train Loss: 0.6491
+Averaged Test Accuracy: 0.7120
+------------------------- time cost ------------------------- 7.705498218536377
+-------------Round number: 9-------------
+Evaluate global model
+Averaged Train Loss: 0.5819
+Averaged Test Accuracy: 0.7087
+------------------------- time cost ------------------------- 8.018734216690063
+-------------Round number: 10-------------
+Evaluate global model
+Averaged Train Loss: 0.5160
+Averaged Test Accuracy: 0.7270
+------------------------- time cost ------------------------- 7.692025423049927
+-------------Round number: 11-------------
+Evaluate global model
+Averaged Train Loss: 0.4490
+Averaged Test Accuracy: 0.7201
+------------------------- time cost ------------------------- 8.09801173210144
+-------------Round number: 12-------------
+Evaluate global model
+Averaged Train Loss: 0.3856
+Averaged Test Accuracy: 0.7320
+------------------------- time cost ------------------------- 7.359376668930054
+-------------Round number: 13-------------
+Evaluate global model
+Averaged Train Loss: 0.3225
+Averaged Test Accuracy: 0.7246
+------------------------- time cost ------------------------- 8.130018711090088
+-------------Round number: 14-------------
+Evaluate global model
+Averaged Train Loss: 0.2605
+Averaged Test Accuracy: 0.7181
+------------------------- time cost ------------------------- 7.386345863342285
+-------------Round number: 15-------------
+Evaluate global model
+Averaged Train Loss: 0.2069
+Averaged Test Accuracy: 0.7249
+------------------------- time cost ------------------------- 7.882119417190552
+-------------Round number: 16-------------
+Evaluate global model
+Averaged Train Loss: 0.1572
+Averaged Test Accuracy: 0.7167
+------------------------- time cost ------------------------- 7.847451210021973
+-------------Round number: 17-------------
+Evaluate global model
+Averaged Train Loss: 0.1174
+Averaged Test Accuracy: 0.7212
+------------------------- time cost ------------------------- 7.603652477264404
+-------------Round number: 18-------------
+Evaluate global model
+Averaged Train Loss: 0.0829
+Averaged Test Accuracy: 0.7239
+------------------------- time cost ------------------------- 8.032660961151123
+-------------Round number: 19-------------
+Evaluate global model
+Averaged Train Loss: 0.0568
+Averaged Test Accuracy: 0.7312
+------------------------- time cost ------------------------- 7.677336931228638
+-------------Round number: 20-------------
+Evaluate global model
+Averaged Train Loss: 0.0363
+Averaged Test Accuracy: 0.7323
+------------------------- time cost ------------------------- 8.123210430145264
+Best accuracy.
+0.7323333333333333
+Average time cost per round.
+7.806873250007629
+Traceback (most recent call last):
+  File "/home/kjb/moofl/fedmoco/system/main.py", line 408, in <module>
+    run(args)
+  File "/home/kjb/moofl/fedmoco/system/main.py", line 249, in run
+    server.train()
+  File "/home/kjb/moofl/fedmoco/system/flcore/servers/servermgda.py", line 67, in train
+    self.save_results()
+  File "/home/kjb/moofl/fedmoco/system/flcore/servers/serverbase2.py", line 192, in save_results
+    if (len(self.rs_test_acc)):
+AttributeError: 'FedMGDA' object has no attribute 'rs_test_acc'

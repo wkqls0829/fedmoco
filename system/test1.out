@@ -1,3 +1,11 @@
+wandb: Currently logged in as: jabin. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.15.1
+wandb: Run data is saved locally in /home/kjb/moofl/fedmoco/system/wandb/run-20230504_153417-k0bhrq3s
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run grievous-republic-48
+wandb: ⭐️ View project at https://wandb.ai/jabin/fedmoco-system
+wandb: 🚀 View run at https://wandb.ai/jabin/fedmoco-system/runs/k0bhrq3s
+wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
 ==================================================
 Algorithm: FedMGDA
 Local batch size: 10
@@ -8,7 +16,7 @@ Clients join in each round: 1.0
 Client drop rate: 0.0
 Time select: False
 Time threthold: 10000
-Global rounds: 20
+Global rounds: 10
 Running times: 1
 Dataset: Cifar10
 Local model: cnn
@@ -36,6 +44,7 @@ FedAvgCNN(
   (fc): Linear(in_features=512, out_features=10, bias=True)
 )
 Cifar10_central
+Cifar10_central
 
 Join ratio / total clients: 1.0 / 1
 Finished creating server and clients.
@@ -43,263 +52,110 @@ Finished creating server and clients.
 -------------Round number: 0-------------
 
 Evaluate global model
-Cifar10_central
-Averaged Train Loss: 2.3039
-Averaged Test Accuracy: 0.0942
-Averaged Test AUC: 0.4906
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 23.846883535385132
+[6864.0]
+[15000]
+Averaged Train Loss: 1.7894
+Averaged Test Accuracy: 0.4576
+------------------------- time cost ------------------------- 9.564871311187744
 
 -------------Round number: 1-------------
 
 Evaluate global model
-Cifar10_central
-Averaged Train Loss: 1.5594
-Averaged Test Accuracy: 0.4428
-Averaged Test AUC: 0.8334
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 23.915608406066895
+[7737.0]
+[15000]
+Averaged Train Loss: 1.3936
+Averaged Test Accuracy: 0.5158
+------------------------- time cost ------------------------- 8.446064233779907
 
 -------------Round number: 2-------------
 
 Evaluate global model
-Cifar10_central
-Averaged Train Loss: 1.2813
-Averaged Test Accuracy: 0.5355
-Averaged Test AUC: 0.8785
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 16.804595232009888
+[8853.0]
+[15000]
+Averaged Train Loss: 1.2159
+Averaged Test Accuracy: 0.5902
+------------------------- time cost ------------------------- 8.395613193511963
 
 -------------Round number: 3-------------
 
 Evaluate global model
-Cifar10_central
-Averaged Train Loss: 1.1183
-Averaged Test Accuracy: 0.5893
-Averaged Test AUC: 0.8962
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 16.40383219718933
+[9317.0]
+[15000]
+Averaged Train Loss: 1.0722
+Averaged Test Accuracy: 0.6211
+------------------------- time cost ------------------------- 8.04805064201355
 
 -------------Round number: 4-------------
 
 Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.9886
-Averaged Test Accuracy: 0.6273
-Averaged Test AUC: 0.9103
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 15.536955118179321
+[9864.0]
+[15000]
+Averaged Train Loss: 0.9663
+Averaged Test Accuracy: 0.6576
+------------------------- time cost ------------------------- 9.016988515853882
 
 -------------Round number: 5-------------
 
 Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.8588
-Averaged Test Accuracy: 0.6685
-Averaged Test AUC: 0.9209
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 15.9316885471344
+[10111.0]
+[15000]
+Averaged Train Loss: 0.8773
+Averaged Test Accuracy: 0.6741
+------------------------- time cost ------------------------- 7.94250750541687
 
 -------------Round number: 6-------------
 
 Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.7833
-Averaged Test Accuracy: 0.6823
-Averaged Test AUC: 0.9239
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 16.041259050369263
+[10325.0]
+[15000]
+Averaged Train Loss: 0.7960
+Averaged Test Accuracy: 0.6883
+------------------------- time cost ------------------------- 8.43087387084961
 
 -------------Round number: 7-------------
 
 Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.7279
-Averaged Test Accuracy: 0.6877
-Averaged Test AUC: 0.9279
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 15.480303049087524
+[10512.0]
+[15000]
+Averaged Train Loss: 0.7210
+Averaged Test Accuracy: 0.7008
+------------------------- time cost ------------------------- 8.225204229354858
 
 -------------Round number: 8-------------
 
 Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.6264
-Averaged Test Accuracy: 0.7038
-Averaged Test AUC: 0.9320
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 15.534667015075684
+[10732.0]
+[15000]
+Averaged Train Loss: 0.6503
+Averaged Test Accuracy: 0.7155
+------------------------- time cost ------------------------- 8.082924365997314
 
 -------------Round number: 9-------------
 
 Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.5762
-Averaged Test Accuracy: 0.7090
-Averaged Test AUC: 0.9322
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 17.294416189193726
+[10654.0]
+[15000]
+Averaged Train Loss: 0.5828
+Averaged Test Accuracy: 0.7103
+------------------------- time cost ------------------------- 8.370861530303955
 
 -------------Round number: 10-------------
 
 Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.4735
-Averaged Test Accuracy: 0.7217
-Averaged Test AUC: 0.9368
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 16.453505754470825
-
--------------Round number: 11-------------
-
-Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.4105
-Averaged Test Accuracy: 0.7242
-Averaged Test AUC: 0.9352
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 15.781139612197876
-
--------------Round number: 12-------------
-
-Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.3420
-Averaged Test Accuracy: 0.7285
-Averaged Test AUC: 0.9354
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 16.45342206954956
-
--------------Round number: 13-------------
-
-Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.2902
-Averaged Test Accuracy: 0.7286
-Averaged Test AUC: 0.9356
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 16.17962646484375
-
--------------Round number: 14-------------
-
-Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.2488
-Averaged Test Accuracy: 0.7265
-Averaged Test AUC: 0.9320
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 15.209130048751831
-
--------------Round number: 15-------------
-
-Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.2043
-Averaged Test Accuracy: 0.7193
-Averaged Test AUC: 0.9340
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 16.92308807373047
-
--------------Round number: 16-------------
-
-Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.1438
-Averaged Test Accuracy: 0.7254
-Averaged Test AUC: 0.9355
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 15.980769157409668
-
--------------Round number: 17-------------
-
-Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.1368
-Averaged Test Accuracy: 0.7225
-Averaged Test AUC: 0.9358
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 15.629824876785278
-
--------------Round number: 18-------------
-
-Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.0877
-Averaged Test Accuracy: 0.7277
-Averaged Test AUC: 0.9354
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 15.825057029724121
-
--------------Round number: 19-------------
-
-Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.0544
-Averaged Test Accuracy: 0.7302
-Averaged Test AUC: 0.9376
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 16.783063173294067
-
--------------Round number: 20-------------
-
-Evaluate global model
-Cifar10_central
-Averaged Train Loss: 0.0482
-Averaged Test Accuracy: 0.7268
-Averaged Test AUC: 0.9359
-Std Test Accuracy: 0.0000
-Std Test AUC: 0.0000
-Cifar10_central
-------------------------- time cost ------------------------- 15.552095413208008
+[10877.0]
+[15000]
+Averaged Train Loss: 0.5164
+Averaged Test Accuracy: 0.7251
+------------------------- time cost ------------------------- 8.103395223617554
 
 Best accuracy.
-0.7302
+0.7251333333333333
 
 Average time cost per round.
-16.485702323913575
+8.306248331069947
 File path: ../results/Cifar10_FedMGDA_nc=1_jr=1.0_90001.h5
 
-Average time cost: 357.29s.
+Average time cost: 98.7s.
 All done!
 
 Storage on cuda:0
@@ -307,3 +163,21 @@ Storage on cuda:0
 Total Tensors: 4392690 	Used Memory: 13.41M
 The allocated memory on cuda:0: 13.41M
 -------------------------------------------------------------------------------
+
+Storage on cpu
+-------------------------------------------------------------------------------
+Total Tensors: 368760000 	Used Memory: 703.58M
+-------------------------------------------------------------------------------
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb: avg_train_loss █▆▅▄▃▃▃▂▂▁▁
+wandb:       test_acc ▁▃▄▅▆▇▇▇███
+wandb: 
+wandb: Run summary:
+wandb: avg_train_loss 0.51642
+wandb:       test_acc 0.72513
+wandb: 
+wandb: 🚀 View run grievous-republic-48 at: https://wandb.ai/jabin/fedmoco-system/runs/k0bhrq3s
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230504_153417-k0bhrq3s/logs

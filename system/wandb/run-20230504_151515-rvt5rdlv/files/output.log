@@ -1,0 +1,135 @@
+
+wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+==================================================
+Algorithm: FedMGDA
+Local batch size: 10
+Local steps: 1
+Local learing rate: 0.005
+Total number of clients: 1
+Clients join in each round: 1.0
+Client drop rate: 0.0
+Time select: False
+Time threthold: 10000
+Global rounds: 10
+Running times: 1
+Dataset: Cifar10
+Local model: cnn
+Using device: cuda
+Cuda device id: 7
+==================================================
+============= Running time: 0th =============
+Creating server and clients ...
+FedAvgCNN(
+  (conv1): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  )
+  (fc1): Sequential(
+    (0): Linear(in_features=1600, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+  )
+  (fc): Linear(in_features=512, out_features=10, bias=True)
+)
+Cifar10_central
+Cifar10_central
+Join ratio / total clients: 1.0 / 1
+Finished creating server and clients.
+-------------Round number: 0-------------
+Evaluate global model
+[6878.0]
+[15000]
+Averaged Train Loss: 1.7895
+Averaged Test Accuracy: 0.4585
+------------------------- time cost ------------------------- 10.404385566711426
+-------------Round number: 1-------------
+Evaluate global model
+[7723.0]
+[15000]
+Averaged Train Loss: 1.3930
+Averaged Test Accuracy: 0.5149
+------------------------- time cost ------------------------- 10.158305168151855
+-------------Round number: 2-------------
+Evaluate global model
+[8865.0]
+[15000]
+Averaged Train Loss: 1.2143
+Averaged Test Accuracy: 0.5910
+------------------------- time cost ------------------------- 9.799251794815063
+-------------Round number: 3-------------
+Evaluate global model
+[9315.0]
+[15000]
+Averaged Train Loss: 1.0705
+Averaged Test Accuracy: 0.6210
+------------------------- time cost ------------------------- 9.535014629364014
+-------------Round number: 4-------------
+Evaluate global model
+[9888.0]
+[15000]
+Averaged Train Loss: 0.9651
+Averaged Test Accuracy: 0.6592
+------------------------- time cost ------------------------- 10.124115467071533
+-------------Round number: 5-------------
+Evaluate global model
+[10128.0]
+[15000]
+Averaged Train Loss: 0.8761
+Averaged Test Accuracy: 0.6752
+------------------------- time cost ------------------------- 9.360546112060547
+-------------Round number: 6-------------
+Evaluate global model
+[10302.0]
+[15000]
+Averaged Train Loss: 0.7938
+Averaged Test Accuracy: 0.6868
+------------------------- time cost ------------------------- 10.127070426940918
+-------------Round number: 7-------------
+Evaluate global model
+[10533.0]
+[15000]
+Averaged Train Loss: 0.7191
+Averaged Test Accuracy: 0.7022
+------------------------- time cost ------------------------- 9.518110752105713
+-------------Round number: 8-------------
+Evaluate global model
+[10680.0]
+[15000]
+Averaged Train Loss: 0.6494
+Averaged Test Accuracy: 0.7120
+------------------------- time cost ------------------------- 10.249318361282349
+-------------Round number: 9-------------
+Evaluate global model
+[10590.0]
+[15000]
+Averaged Train Loss: 0.5817
+Averaged Test Accuracy: 0.7060
+------------------------- time cost ------------------------- 10.376423358917236
+-------------Round number: 10-------------
+Evaluate global model
+[10882.0]
+[15000]
+Averaged Train Loss: 0.5158
+Averaged Test Accuracy: 0.7255
+------------------------- time cost ------------------------- 9.976845502853394
+Best accuracy.
+0.7254666666666667
+Average time cost per round.
+9.922500157356263
+File path: ../results/Cifar10_FedMGDA_nc=1_jr=1.0_90001.h5
+Average time cost: 115.7s.
+All done!
+Storage on cuda:0
+-------------------------------------------------------------------------------
+Total Tensors: 4392690 	Used Memory: 13.41M
+The allocated memory on cuda:0: 13.41M
+-------------------------------------------------------------------------------
+Storage on cpu
+-------------------------------------------------------------------------------
+Total Tensors: 368760000 	Used Memory: 703.58M
+-------------------------------------------------------------------------------

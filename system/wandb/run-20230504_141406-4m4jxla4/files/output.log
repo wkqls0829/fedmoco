@@ -1,0 +1,206 @@
+==================================================
+Algorithm: FedCentral
+Local batch size: 10
+Local steps: 1
+Local learing rate: 0.005
+Total number of clients: 1
+Clients join in each round: 1.0
+Client drop rate: 0.0
+Time select: False
+Time threthold: 10000
+Global rounds: 20
+Running times: 1
+Dataset: Cifar10
+Local model: cnn
+Using device: cuda
+Cuda device id: 7
+==================================================
+============= Running time: 0th =============
+Creating server and clients ...
+FedAvgCNN(
+  (conv1): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  )
+  (fc1): Sequential(
+    (0): Linear(in_features=1600, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+  )
+  (fc): Linear(in_features=512, out_features=10, bias=True)
+)
+Cifar10_central
+wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+Cifar10_central
+Join ratio / total clients: 1.0 / 1
+Finished creating server and clients.
+Cifar10_central
+1
+-------------Round number: 0-------------
+Evaluate global model
+[6884.0]
+[15000]
+Averaged Train Loss: 1.7896
+Averaged Test Accuracy: 0.4589
+------------------------- time cost ------------------------- 32.44145965576172
+-------------Round number: 1-------------
+Evaluate global model
+[8005.0]
+[15000]
+Averaged Train Loss: 1.3916
+Averaged Test Accuracy: 0.5337
+------------------------- time cost ------------------------- 30.01710557937622
+-------------Round number: 2-------------
+Evaluate global model
+[8915.0]
+[15000]
+Averaged Train Loss: 1.2096
+Averaged Test Accuracy: 0.5943
+------------------------- time cost ------------------------- 25.674196481704712
+-------------Round number: 3-------------
+Evaluate global model
+[9476.0]
+[15000]
+Averaged Train Loss: 1.0696
+Averaged Test Accuracy: 0.6317
+------------------------- time cost ------------------------- 26.426470041275024
+-------------Round number: 4-------------
+Evaluate global model
+[9869.0]
+[15000]
+Averaged Train Loss: 0.9640
+Averaged Test Accuracy: 0.6579
+------------------------- time cost ------------------------- 26.55125141143799
+-------------Round number: 5-------------
+Evaluate global model
+[10024.0]
+[15000]
+Averaged Train Loss: 0.8726
+Averaged Test Accuracy: 0.6683
+------------------------- time cost ------------------------- 25.989599466323853
+-------------Round number: 6-------------
+Evaluate global model
+[10357.0]
+[15000]
+Averaged Train Loss: 0.7931
+Averaged Test Accuracy: 0.6905
+------------------------- time cost ------------------------- 26.311877965927124
+-------------Round number: 7-------------
+Evaluate global model
+[10672.0]
+[15000]
+Averaged Train Loss: 0.7161
+Averaged Test Accuracy: 0.7115
+------------------------- time cost ------------------------- 26.24988079071045
+-------------Round number: 8-------------
+Evaluate global model
+[10552.0]
+[15000]
+Averaged Train Loss: 0.6466
+Averaged Test Accuracy: 0.7035
+------------------------- time cost ------------------------- 26.14763045310974
+-------------Round number: 9-------------
+Evaluate global model
+[10892.0]
+[15000]
+Averaged Train Loss: 0.5786
+Averaged Test Accuracy: 0.7261
+------------------------- time cost ------------------------- 26.356229066848755
+-------------Round number: 10-------------
+Evaluate global model
+[10741.0]
+[15000]
+Averaged Train Loss: 0.5136
+Averaged Test Accuracy: 0.7161
+------------------------- time cost ------------------------- 25.99711036682129
+-------------Round number: 11-------------
+Evaluate global model
+[10946.0]
+[15000]
+Averaged Train Loss: 0.4468
+Averaged Test Accuracy: 0.7297
+------------------------- time cost ------------------------- 24.603075981140137
+-------------Round number: 12-------------
+Evaluate global model
+[10892.0]
+[15000]
+Averaged Train Loss: 0.3819
+Averaged Test Accuracy: 0.7261
+------------------------- time cost ------------------------- 16.96385622024536
+-------------Round number: 13-------------
+Evaluate global model
+[10948.0]
+[15000]
+Averaged Train Loss: 0.3189
+Averaged Test Accuracy: 0.7299
+------------------------- time cost ------------------------- 13.506650447845459
+-------------Round number: 14-------------
+Evaluate global model
+[10868.0]
+[15000]
+Averaged Train Loss: 0.2596
+Averaged Test Accuracy: 0.7245
+------------------------- time cost ------------------------- 13.878964185714722
+-------------Round number: 15-------------
+Evaluate global model
+[10696.0]
+[15000]
+Averaged Train Loss: 0.2035
+Averaged Test Accuracy: 0.7131
+------------------------- time cost ------------------------- 13.375826358795166
+-------------Round number: 16-------------
+Evaluate global model
+[10996.0]
+[15000]
+Averaged Train Loss: 0.1563
+Averaged Test Accuracy: 0.7331
+------------------------- time cost ------------------------- 13.339822053909302
+-------------Round number: 17-------------
+Evaluate global model
+[10873.0]
+[15000]
+Averaged Train Loss: 0.1162
+Averaged Test Accuracy: 0.7249
+------------------------- time cost ------------------------- 13.565330505371094
+-------------Round number: 18-------------
+Evaluate global model
+[10928.0]
+[15000]
+Averaged Train Loss: 0.0837
+Averaged Test Accuracy: 0.7285
+------------------------- time cost ------------------------- 13.585120439529419
+-------------Round number: 19-------------
+Evaluate global model
+[10994.0]
+[15000]
+Averaged Train Loss: 0.0564
+Averaged Test Accuracy: 0.7329
+------------------------- time cost ------------------------- 13.51003909111023
+-------------Round number: 20-------------
+Evaluate global model
+[10986.0]
+[15000]
+Averaged Train Loss: 0.0329
+Averaged Test Accuracy: 0.7324
+------------------------- time cost ------------------------- 13.58560824394226
+Best accuracy.
+0.7330666666666666
+Average time cost per round.
+20.781782257556916
+File path: ../results/Cifar10_FedCentral_nc=1_jr=1.0_90003.h5
+Average time cost: 457.03s.
+All done!
+Storage on cuda:0
+-------------------------------------------------------------------------------
+Total Tensors: 7028304 	Used Memory: 20.12M
+The allocated memory on cuda:0: 20.12M
+-------------------------------------------------------------------------------
+Storage on cpu
+-------------------------------------------------------------------------------
+Total Tensors: 737520000 	Used Memory: 1.37G
+-------------------------------------------------------------------------------

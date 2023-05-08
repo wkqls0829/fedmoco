@@ -1,0 +1,203 @@
+wandb: Currently logged in as: jabin. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.15.1
+wandb: Run data is saved locally in /home/kjb/moofl/fedmoco/system/wandb/run-20230504_153418-sbcp44iw
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run elegant-cruiser-51
+wandb: ⭐️ View project at https://wandb.ai/jabin/fedmoco-system
+wandb: 🚀 View run at https://wandb.ai/jabin/fedmoco-system/runs/sbcp44iw
+wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+==================================================
+Algorithm: FedCentral
+Local batch size: 10
+Local steps: 1
+Local learing rate: 0.005
+Total number of clients: 10
+Clients join in each round: 1.0
+Client drop rate: 0.0
+Time select: False
+Time threthold: 10000
+Global rounds: 10
+Running times: 1
+Dataset: Cifar10
+Local model: cnn
+Using device: cuda
+Cuda device id: 6
+==================================================
+
+============= Running time: 0th =============
+Creating server and clients ...
+FedAvgCNN(
+  (conv1): Sequential(
+    (0): Conv2d(3, 32, kernel_size=(5, 5), stride=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  )
+  (conv2): Sequential(
+    (0): Conv2d(32, 64, kernel_size=(5, 5), stride=(1, 1))
+    (1): ReLU(inplace=True)
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+  )
+  (fc1): Sequential(
+    (0): Linear(in_features=1600, out_features=512, bias=True)
+    (1): ReLU(inplace=True)
+  )
+  (fc): Linear(in_features=512, out_features=10, bias=True)
+)
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+Cifar10_iid
+
+Join ratio / total clients: 1.0 / 10
+Finished creating server and clients.
+Cifar10_central
+1
+
+-------------Round number: 0-------------
+
+Evaluate global model
+[688.0, 696.0, 724.0, 707.0, 689.0, 716.0, 693.0, 650.0, 690.0, 666.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 2.2810
+Averaged Test Accuracy: 0.4613
+------------------------- time cost ------------------------- 15.170024394989014
+
+-------------Round number: 1-------------
+
+Evaluate global model
+[833.0, 858.0, 852.0, 849.0, 821.0, 845.0, 816.0, 811.0, 807.0, 818.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 1.4857
+Averaged Test Accuracy: 0.5540
+------------------------- time cost ------------------------- 13.889169454574585
+
+-------------Round number: 2-------------
+
+Evaluate global model
+[886.0, 940.0, 923.0, 939.0, 924.0, 915.0, 874.0, 887.0, 883.0, 911.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 1.2836
+Averaged Test Accuracy: 0.6055
+------------------------- time cost ------------------------- 13.862657070159912
+
+-------------Round number: 3-------------
+
+Evaluate global model
+[987.0, 1015.0, 985.0, 985.0, 978.0, 1005.0, 954.0, 951.0, 950.0, 991.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 1.1222
+Averaged Test Accuracy: 0.6534
+------------------------- time cost ------------------------- 13.807920932769775
+
+-------------Round number: 4-------------
+
+Evaluate global model
+[1047.0, 1045.0, 1080.0, 1058.0, 1040.0, 1047.0, 1034.0, 1040.0, 1037.0, 1056.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 1.0078
+Averaged Test Accuracy: 0.6989
+------------------------- time cost ------------------------- 13.842045783996582
+
+-------------Round number: 5-------------
+
+Evaluate global model
+[1069.0, 1048.0, 1081.0, 1053.0, 1040.0, 1058.0, 1037.0, 1050.0, 1046.0, 1048.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 0.9134
+Averaged Test Accuracy: 0.7020
+------------------------- time cost ------------------------- 13.914348602294922
+
+-------------Round number: 6-------------
+
+Evaluate global model
+[1080.0, 1105.0, 1119.0, 1120.0, 1115.0, 1099.0, 1071.0, 1088.0, 1093.0, 1107.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 0.8339
+Averaged Test Accuracy: 0.7331
+------------------------- time cost ------------------------- 13.95249056816101
+
+-------------Round number: 7-------------
+
+Evaluate global model
+[1131.0, 1129.0, 1148.0, 1146.0, 1145.0, 1142.0, 1111.0, 1134.0, 1132.0, 1151.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 0.7616
+Averaged Test Accuracy: 0.7579
+------------------------- time cost ------------------------- 14.259649991989136
+
+-------------Round number: 8-------------
+
+Evaluate global model
+[1169.0, 1184.0, 1179.0, 1184.0, 1180.0, 1190.0, 1167.0, 1181.0, 1178.0, 1185.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 0.6989
+Averaged Test Accuracy: 0.7865
+------------------------- time cost ------------------------- 13.65322470664978
+
+-------------Round number: 9-------------
+
+Evaluate global model
+[1219.0, 1234.0, 1223.0, 1215.0, 1235.0, 1225.0, 1216.0, 1208.0, 1232.0, 1221.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 0.6412
+Averaged Test Accuracy: 0.8152
+------------------------- time cost ------------------------- 14.334506511688232
+
+-------------Round number: 10-------------
+
+Evaluate global model
+[1234.0, 1239.0, 1248.0, 1233.0, 1237.0, 1228.0, 1228.0, 1242.0, 1215.0, 1245.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 0.5867
+Averaged Test Accuracy: 0.8233
+------------------------- time cost ------------------------- 13.467790603637695
+
+Best accuracy.
+0.8232666666666667
+
+Average time cost per round.
+13.898380422592163
+File path: ../results/Cifar10_FedCentral_nc=10_jr=1.0_90004.h5
+
+Average time cost: 162.16s.
+All done!
+
+Storage on cuda:0
+-------------------------------------------------------------------------------
+Total Tensors: 29870292 	Used Memory: 77.11M
+The allocated memory on cuda:0: 77.11M
+-------------------------------------------------------------------------------
+
+Storage on cpu
+-------------------------------------------------------------------------------
+Total Tensors: 737520000 	Used Memory: 1.37G
+-------------------------------------------------------------------------------
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb: avg_train_loss █▅▄▃▃▂▂▂▁▁▁
+wandb:       test_acc ▁▃▄▅▆▆▆▇▇██
+wandb: 
+wandb: Run summary:
+wandb: avg_train_loss 0.5867
+wandb:       test_acc 0.82327
+wandb: 
+wandb: 🚀 View run elegant-cruiser-51 at: https://wandb.ai/jabin/fedmoco-system/runs/sbcp44iw
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20230504_153418-sbcp44iw/logs

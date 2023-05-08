@@ -1,0 +1,459 @@
+2023-05-04 14:14:06,795 INFO    StreamThr :3772411 [internal.py:wandb_internal():86] W&B internal server running at pid: 3772411, started at: 2023-05-04 14:14:06.795357
+2023-05-04 14:14:06,797 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status
+2023-05-04 14:14:06,798 INFO    WriterThread:3772411 [datastore.py:open_for_write():85] open: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/run-kw83m403.wandb
+2023-05-04 14:14:06,800 DEBUG   SenderThread:3772411 [sender.py:send():375] send: header
+2023-05-04 14:14:06,813 DEBUG   SenderThread:3772411 [sender.py:send():375] send: run
+2023-05-04 14:14:07,488 INFO    SenderThread:3772411 [dir_watcher.py:__init__():219] watching files in: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files
+2023-05-04 14:14:07,488 INFO    SenderThread:3772411 [sender.py:_start_run_threads():1124] run started: kw83m403 with start time 1683177246.795229
+2023-05-04 14:14:07,488 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:14:07,489 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:14:07,494 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: check_version
+2023-05-04 14:14:07,495 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: check_version
+2023-05-04 14:14:07,708 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: run_start
+2023-05-04 14:14:07,726 DEBUG   HandlerThread:3772411 [system_info.py:__init__():31] System info init
+2023-05-04 14:14:07,726 DEBUG   HandlerThread:3772411 [system_info.py:__init__():46] System info init done
+2023-05-04 14:14:07,726 INFO    HandlerThread:3772411 [system_monitor.py:start():181] Starting system monitor
+2023-05-04 14:14:07,727 INFO    SystemMonitor:3772411 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-05-04 14:14:07,727 INFO    HandlerThread:3772411 [system_monitor.py:probe():201] Collecting system info
+2023-05-04 14:14:07,727 INFO    SystemMonitor:3772411 [interfaces.py:start():190] Started cpu monitoring
+2023-05-04 14:14:07,728 INFO    SystemMonitor:3772411 [interfaces.py:start():190] Started disk monitoring
+2023-05-04 14:14:07,728 INFO    SystemMonitor:3772411 [interfaces.py:start():190] Started gpu monitoring
+2023-05-04 14:14:07,729 INFO    SystemMonitor:3772411 [interfaces.py:start():190] Started memory monitoring
+2023-05-04 14:14:07,730 INFO    SystemMonitor:3772411 [interfaces.py:start():190] Started network monitoring
+2023-05-04 14:14:07,786 DEBUG   HandlerThread:3772411 [system_info.py:probe():195] Probing system
+2023-05-04 14:14:07,786 DEBUG   HandlerThread:3772411 [system_info.py:_probe_git():180] Probing git
+2023-05-04 14:14:07,797 DEBUG   HandlerThread:3772411 [system_info.py:_probe_git():188] Probing git done
+2023-05-04 14:14:07,797 DEBUG   HandlerThread:3772411 [system_info.py:probe():240] Probing system done
+2023-05-04 14:14:07,797 DEBUG   HandlerThread:3772411 [system_monitor.py:probe():210] {'os': 'Linux-5.13.0-37-generic-x86_64-with-glibc2.31', 'python': '3.9.16', 'heartbeatAt': '2023-05-04T05:14:07.786384', 'startedAt': '2023-05-04T05:14:06.787273', 'docker': None, 'cuda': None, 'args': ('-nc', '1', '-data', 'Cifar10', '-m', 'cnn', '-algo', 'FedMGDA', '-gr', '20', '-jr', '1', '-bt', '0.5', '-rh', '1', '-did', '7', '-go', 'cnn', '-fr', '0', '-tid', '90001', '-cdn', '10', '-dd', 'Cifar10_central'), 'state': 'running', 'program': '/home/kjb/moofl/fedmoco/system/main.py', 'codePath': 'system/main.py', 'git': {'remote': 'https://github.com/wkqls0829/fedmoco.git', 'commit': 'fe24e3cde6704d121c0a084d507a783c75b2736d'}, 'email': 'jbkoo@postech.ac.kr', 'root': '/home/kjb/moofl/fedmoco', 'host': 'ml6', 'username': 'kjb', 'executable': '/home/kjb/.conda/envs/pflniid/bin/python', 'cpu_count': 48, 'cpu_count_logical': 48, 'cpu_freq': {'current': 1842.4488541666667, 'min': 1500.0, 'max': 2850.0}, 'cpu_freq_per_core': [{'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2100.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 4023.784, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2100.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 4024.756, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2100.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 3898.874, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 3898.818, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 3898.818, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 3119.888, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 1500.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2850.0, 'min': 1500.0, 'max': 2850.0}, {'current': 2024.642, 'min': 1500.0, 'max': 2850.0}], 'disk': {'total': 1694.9992179870605, 'used': 1059.2761268615723}, 'gpu': 'NVIDIA RTX A5000', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}, {'name': 'NVIDIA RTX A5000', 'memory_total': 25434652672}], 'memory': {'total': 377.75384521484375}}
+2023-05-04 14:14:07,797 INFO    HandlerThread:3772411 [system_monitor.py:probe():211] Finished collecting system info
+2023-05-04 14:14:07,797 INFO    HandlerThread:3772411 [system_monitor.py:probe():214] Publishing system info
+2023-05-04 14:14:07,797 DEBUG   HandlerThread:3772411 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-05-04 14:14:07,797 DEBUG   HandlerThread:3772411 [system_info.py:_save_pip():67] Saving pip packages done
+2023-05-04 14:14:07,797 DEBUG   HandlerThread:3772411 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-05-04 14:14:08,490 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_created():278] file/dir created: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/requirements.txt
+2023-05-04 14:14:08,490 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_created():278] file/dir created: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/conda-environment.yaml
+2023-05-04 14:14:08,491 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_created():278] file/dir created: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:14:10,032 DEBUG   HandlerThread:3772411 [system_info.py:_save_conda():86] Saving conda packages done
+2023-05-04 14:14:10,033 INFO    HandlerThread:3772411 [system_monitor.py:probe():216] Finished publishing system info
+2023-05-04 14:14:10,034 DEBUG   SenderThread:3772411 [sender.py:send():375] send: files
+2023-05-04 14:14:10,034 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-05-04 14:14:10,039 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:14:10,039 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:14:10,350 DEBUG   SenderThread:3772411 [sender.py:send():375] send: telemetry
+2023-05-04 14:14:10,350 DEBUG   SenderThread:3772411 [sender.py:send():375] send: config
+2023-05-04 14:14:10,350 DEBUG   SenderThread:3772411 [sender.py:send():375] send: telemetry
+2023-05-04 14:14:10,350 DEBUG   SenderThread:3772411 [sender.py:send():375] send: run
+2023-05-04 14:14:10,492 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/conda-environment.yaml
+2023-05-04 14:14:10,492 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/config.yaml
+2023-05-04 14:14:10,492 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_created():278] file/dir created: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-metadata.json
+2023-05-04 14:14:10,705 INFO    SenderThread:3772411 [sender.py:send_run():1002] updated run: kw83m403
+2023-05-04 14:14:10,705 DEBUG   SenderThread:3772411 [sender.py:send():375] send: telemetry
+2023-05-04 14:14:10,764 INFO    wandb-upload_0:3772411 [upload_job.py:push():137] Uploaded file /tmp/tmphacdxh08wandb/0fam072x-wandb-metadata.json
+2023-05-04 14:14:11,360 DEBUG   SenderThread:3772411 [sender.py:send():375] send: telemetry
+2023-05-04 14:14:11,491 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_created():278] file/dir created: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:14:12,362 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:14:13,492 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:14:15,493 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:14:17,493 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:14:18,361 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:14:23,362 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:14:25,039 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:14:25,039 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:14:29,308 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:14:34,505 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:14:35,497 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:14:36,446 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:14:36,452 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:14:36,452 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:14:36,453 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:14:36,498 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:14:37,498 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:14:40,039 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:14:40,039 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:14:40,298 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:14:41,499 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/config.yaml
+2023-05-04 14:14:45,582 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:14:50,583 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:14:53,502 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:14:55,039 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:14:55,040 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:14:55,517 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:14:55,524 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:14:55,524 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:14:55,531 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:14:56,503 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:14:56,532 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:14:57,503 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:15:01,534 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:15:06,535 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:15:07,730 DEBUG   SystemMonitor:3772411 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-05-04 14:15:07,732 DEBUG   SenderThread:3772411 [sender.py:send():375] send: stats
+2023-05-04 14:15:10,040 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:15:10,041 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:15:12,424 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:15:13,508 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:15:14,984 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:15:14,993 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:15:14,993 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:15:14,994 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:15:15,509 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:15:17,510 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:15:17,994 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:15:22,995 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:15:25,040 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:15:25,041 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:15:28,290 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:15:29,513 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:15:32,119 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:15:32,126 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:15:32,127 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:15:32,127 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:15:32,514 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:15:33,515 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:15:34,128 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:15:37,733 DEBUG   SenderThread:3772411 [sender.py:send():375] send: stats
+2023-05-04 14:15:39,734 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:15:40,042 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:15:40,043 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:15:45,236 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:15:47,519 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:15:47,663 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:15:47,669 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:15:47,670 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:15:47,670 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:15:48,519 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:15:49,519 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:15:50,673 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:15:55,041 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:15:55,042 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:15:56,269 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:16:02,221 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:16:03,524 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:16:03,565 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:16:03,572 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:16:03,572 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:16:03,575 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:16:04,525 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:16:05,525 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:16:07,577 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:16:07,734 DEBUG   SenderThread:3772411 [sender.py:send():375] send: stats
+2023-05-04 14:16:10,041 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:16:10,042 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:16:13,303 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:16:17,529 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:16:18,538 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:16:19,695 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:16:19,703 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:16:19,704 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:16:19,705 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:16:20,530 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:16:21,530 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:16:23,706 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:16:25,041 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:16:25,042 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:16:29,286 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:16:33,535 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:16:34,378 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:16:35,212 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:16:35,221 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:16:35,222 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:16:35,222 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:16:35,535 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:16:37,536 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:16:37,736 DEBUG   SenderThread:3772411 [sender.py:send():375] send: stats
+2023-05-04 14:16:39,737 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:16:40,042 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:16:40,042 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:16:45,301 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:16:49,540 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:16:50,881 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:16:51,021 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:16:51,023 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:16:51,024 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:16:51,024 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:16:51,541 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:16:53,541 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:16:55,041 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:16:55,042 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:16:56,318 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:17:01,319 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:17:05,545 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:17:05,954 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:17:05,955 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:17:05,955 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:17:05,955 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:17:06,546 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:17:06,956 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:17:07,546 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:17:07,737 DEBUG   SenderThread:3772411 [sender.py:send():375] send: stats
+2023-05-04 14:17:10,041 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:17:10,042 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:17:12,282 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:17:17,283 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:17:21,550 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:17:22,363 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:17:22,364 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:17:22,364 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:17:22,365 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:17:22,365 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:17:22,550 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:17:23,551 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:17:25,041 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:17:25,042 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:17:28,309 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:17:33,309 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:17:35,555 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:17:37,705 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:17:37,706 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:17:37,706 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:17:37,707 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:17:37,738 DEBUG   SenderThread:3772411 [sender.py:send():375] send: stats
+2023-05-04 14:17:38,556 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:17:38,739 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:17:39,556 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:17:40,042 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:17:40,042 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:17:44,305 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:17:49,306 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:17:53,560 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:17:53,790 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:17:53,792 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:17:53,793 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:17:53,793 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:17:54,561 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:17:54,797 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:17:55,042 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:17:55,042 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:17:55,561 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:18:00,311 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:18:05,312 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:18:07,565 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:18:07,739 DEBUG   SenderThread:3772411 [sender.py:send():375] send: stats
+2023-05-04 14:18:09,436 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:18:09,442 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:18:09,442 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:18:09,443 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:18:09,566 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:18:10,042 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:18:10,043 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:18:10,326 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:18:11,567 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:18:15,327 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:18:20,328 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:18:23,571 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:18:24,612 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:18:24,614 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:18:24,614 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:18:24,614 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:18:25,042 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:18:25,043 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:18:25,572 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:18:25,573 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:18:26,321 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:18:31,322 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:18:36,323 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:18:37,740 DEBUG   SenderThread:3772411 [sender.py:send():375] send: stats
+2023-05-04 14:18:39,577 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:18:40,042 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:18:40,043 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:18:41,218 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:18:41,219 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:18:41,220 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:18:41,221 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:18:41,578 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:18:42,222 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:18:43,578 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:18:47,223 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:18:52,224 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:18:55,042 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:18:55,043 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:18:55,582 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:18:55,836 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:18:55,838 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:18:55,838 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:18:55,839 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:18:56,583 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:18:57,583 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:18:57,841 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:19:02,842 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:19:07,741 DEBUG   SenderThread:3772411 [sender.py:send():375] send: stats
+2023-05-04 14:19:08,742 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:19:10,042 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:19:10,043 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:19:11,588 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:19:12,015 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:19:12,022 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:19:12,022 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:19:12,023 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:19:12,589 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:19:13,589 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:19:14,024 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:19:19,025 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:19:24,026 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:19:25,043 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:19:25,043 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:19:25,593 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:19:27,774 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:19:27,785 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:19:27,785 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:19:27,786 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:19:28,594 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:19:29,594 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:19:29,787 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:19:34,787 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:19:37,742 DEBUG   SenderThread:3772411 [sender.py:send():375] send: stats
+2023-05-04 14:19:39,847 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:19:40,043 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-04 14:19:40,043 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: stop_status
+2023-05-04 14:19:41,410 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:19:41,412 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:19:41,413 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:19:41,414 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:19:41,598 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:19:41,598 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:19:43,599 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:19:45,415 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:19:50,651 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:19:51,277 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-04 14:19:51,279 DEBUG   SenderThread:3772411 [sender.py:send():375] send: history
+2023-05-04 14:19:51,280 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: summary_record
+2023-05-04 14:19:51,280 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:19:51,601 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:19:51,602 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:19:52,054 DEBUG   SenderThread:3772411 [sender.py:send():375] send: exit
+2023-05-04 14:19:52,054 INFO    SenderThread:3772411 [sender.py:send_exit():598] handling exit code: 0
+2023-05-04 14:19:52,055 INFO    SenderThread:3772411 [sender.py:send_exit():600] handling runtime: 344
+2023-05-04 14:19:52,056 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:19:52,056 INFO    SenderThread:3772411 [sender.py:send_exit():606] send defer
+2023-05-04 14:19:52,057 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:52,057 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 0
+2023-05-04 14:19:52,057 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:52,058 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-05-04 14:19:52,058 INFO    SenderThread:3772411 [sender.py:transition_state():626] send defer: 1
+2023-05-04 14:19:52,058 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:52,058 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 1
+2023-05-04 14:19:52,058 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:52,058 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-05-04 14:19:52,058 INFO    SenderThread:3772411 [sender.py:transition_state():626] send defer: 2
+2023-05-04 14:19:52,059 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:52,059 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 2
+2023-05-04 14:19:52,059 INFO    HandlerThread:3772411 [system_monitor.py:finish():190] Stopping system monitor
+2023-05-04 14:19:52,059 DEBUG   SystemMonitor:3772411 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-05-04 14:19:52,059 DEBUG   SystemMonitor:3772411 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-05-04 14:19:52,060 INFO    HandlerThread:3772411 [interfaces.py:finish():202] Joined cpu monitor
+2023-05-04 14:19:52,062 INFO    HandlerThread:3772411 [interfaces.py:finish():202] Joined disk monitor
+2023-05-04 14:19:52,312 INFO    HandlerThread:3772411 [interfaces.py:finish():202] Joined gpu monitor
+2023-05-04 14:19:52,312 INFO    HandlerThread:3772411 [interfaces.py:finish():202] Joined memory monitor
+2023-05-04 14:19:52,312 INFO    HandlerThread:3772411 [interfaces.py:finish():202] Joined network monitor
+2023-05-04 14:19:52,313 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:52,313 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-05-04 14:19:52,313 INFO    SenderThread:3772411 [sender.py:transition_state():626] send defer: 3
+2023-05-04 14:19:52,314 DEBUG   SenderThread:3772411 [sender.py:send():375] send: stats
+2023-05-04 14:19:52,315 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:52,315 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 3
+2023-05-04 14:19:52,315 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:52,315 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-05-04 14:19:52,315 INFO    SenderThread:3772411 [sender.py:transition_state():626] send defer: 4
+2023-05-04 14:19:52,316 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:52,316 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 4
+2023-05-04 14:19:52,316 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:52,316 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-05-04 14:19:52,316 INFO    SenderThread:3772411 [sender.py:transition_state():626] send defer: 5
+2023-05-04 14:19:52,316 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:52,317 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 5
+2023-05-04 14:19:52,317 DEBUG   SenderThread:3772411 [sender.py:send():375] send: summary
+2023-05-04 14:19:52,317 INFO    SenderThread:3772411 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-04 14:19:52,318 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:52,318 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-05-04 14:19:52,318 INFO    SenderThread:3772411 [sender.py:transition_state():626] send defer: 6
+2023-05-04 14:19:52,318 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:52,318 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 6
+2023-05-04 14:19:52,318 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:52,318 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-05-04 14:19:52,319 INFO    SenderThread:3772411 [sender.py:transition_state():626] send defer: 7
+2023-05-04 14:19:52,319 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: status_report
+2023-05-04 14:19:52,319 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:52,319 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 7
+2023-05-04 14:19:52,319 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:52,319 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-05-04 14:19:52,602 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:19:53,054 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-04 14:19:53,109 INFO    SenderThread:3772411 [sender.py:transition_state():626] send defer: 8
+2023-05-04 14:19:53,109 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: poll_exit
+2023-05-04 14:19:53,109 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:53,110 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 8
+2023-05-04 14:19:53,110 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:53,110 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-05-04 14:19:53,117 INFO    SenderThread:3772411 [sender.py:transition_state():626] send defer: 9
+2023-05-04 14:19:53,117 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:53,117 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 9
+2023-05-04 14:19:53,118 DEBUG   SenderThread:3772411 [sender.py:send():375] send: artifact
+2023-05-04 14:19:53,602 INFO    Thread-12 :3772411 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:19:54,056 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-04 14:19:54,483 INFO    SenderThread:3772411 [sender.py:send_artifact():1474] sent artifact job-https___github.com_wkqls0829_fedmoco.git_system_main.py - {'id': 'QXJ0aWZhY3Q6NDQxNDA5NDc5', 'digest': '53baa4f6d4511370844529e305916cbe', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_wkqls0829_fedmoco.git_system_main.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_wkqls0829_fedmoco.git_system_main.py', 'alias': 'v9'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjY2MjE2MTEw', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDQxNDExMjY5', 'versionIndex': 11}}, 'version': 'v9'}
+2023-05-04 14:19:54,484 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:54,484 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 9
+2023-05-04 14:19:54,484 INFO    SenderThread:3772411 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-05-04 14:19:54,603 INFO    SenderThread:3772411 [dir_watcher.py:finish():395] scan: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files
+2023-05-04 14:19:54,604 INFO    SenderThread:3772411 [dir_watcher.py:finish():409] scan save: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log output.log
+2023-05-04 14:19:54,604 INFO    SenderThread:3772411 [dir_watcher.py:finish():409] scan save: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/config.yaml config.yaml
+2023-05-04 14:19:54,604 INFO    SenderThread:3772411 [dir_watcher.py:finish():409] scan save: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/conda-environment.yaml conda-environment.yaml
+2023-05-04 14:19:54,609 INFO    SenderThread:3772411 [dir_watcher.py:finish():409] scan save: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/requirements.txt requirements.txt
+2023-05-04 14:19:54,613 INFO    SenderThread:3772411 [dir_watcher.py:finish():409] scan save: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json wandb-summary.json
+2023-05-04 14:19:54,613 INFO    SenderThread:3772411 [dir_watcher.py:finish():409] scan save: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-metadata.json wandb-metadata.json
+2023-05-04 14:19:54,613 INFO    SenderThread:3772411 [sender.py:transition_state():626] send defer: 10
+2023-05-04 14:19:54,613 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: poll_exit
+2023-05-04 14:19:54,614 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:54,614 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 10
+2023-05-04 14:19:54,615 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:54,615 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 10
+2023-05-04 14:19:54,618 INFO    SenderThread:3772411 [file_pusher.py:finish():167] shutting down file pusher
+2023-05-04 14:19:55,057 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-04 14:19:55,057 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: poll_exit
+2023-05-04 14:19:55,313 INFO    wandb-upload_1:3772411 [upload_job.py:push():137] Uploaded file /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/config.yaml
+2023-05-04 14:19:55,416 INFO    wandb-upload_0:3772411 [upload_job.py:push():137] Uploaded file /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/output.log
+2023-05-04 14:19:55,665 INFO    wandb-upload_4:3772411 [upload_job.py:push():137] Uploaded file /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/wandb-summary.json
+2023-05-04 14:19:55,666 INFO    wandb-upload_3:3772411 [upload_job.py:push():137] Uploaded file /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/requirements.txt
+2023-05-04 14:19:55,714 INFO    wandb-upload_2:3772411 [upload_job.py:push():137] Uploaded file /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/files/conda-environment.yaml
+2023-05-04 14:19:55,914 INFO    Thread-11 :3772411 [sender.py:transition_state():626] send defer: 11
+2023-05-04 14:19:55,915 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:55,915 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 11
+2023-05-04 14:19:55,916 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:55,916 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 11
+2023-05-04 14:19:55,916 INFO    SenderThread:3772411 [file_pusher.py:join():172] waiting for file pusher
+2023-05-04 14:19:55,916 INFO    SenderThread:3772411 [sender.py:transition_state():626] send defer: 12
+2023-05-04 14:19:55,916 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:55,916 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 12
+2023-05-04 14:19:55,917 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:55,917 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 12
+2023-05-04 14:19:56,059 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-04 14:19:56,266 INFO    SenderThread:3772411 [sender.py:transition_state():626] send defer: 13
+2023-05-04 14:19:56,266 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: poll_exit
+2023-05-04 14:19:56,266 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:56,267 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 13
+2023-05-04 14:19:56,267 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:56,267 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 13
+2023-05-04 14:19:56,267 INFO    SenderThread:3772411 [sender.py:transition_state():626] send defer: 14
+2023-05-04 14:19:56,267 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: defer
+2023-05-04 14:19:56,267 DEBUG   SenderThread:3772411 [sender.py:send():375] send: final
+2023-05-04 14:19:56,267 INFO    HandlerThread:3772411 [handler.py:handle_request_defer():170] handle defer: 14
+2023-05-04 14:19:56,267 DEBUG   SenderThread:3772411 [sender.py:send():375] send: footer
+2023-05-04 14:19:56,267 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: defer
+2023-05-04 14:19:56,267 INFO    SenderThread:3772411 [sender.py:send_request_defer():622] handle sender defer: 14
+2023-05-04 14:19:56,268 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-04 14:19:56,269 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: poll_exit
+2023-05-04 14:19:56,269 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-04 14:19:56,269 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: poll_exit
+2023-05-04 14:19:56,269 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: server_info
+2023-05-04 14:19:56,270 DEBUG   SenderThread:3772411 [sender.py:send_request():402] send_request: server_info
+2023-05-04 14:19:56,272 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: get_summary
+2023-05-04 14:19:56,273 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: sampled_history
+2023-05-04 14:19:56,500 INFO    MainThread:3772411 [wandb_run.py:_footer_history_summary_info():3469] rendering history
+2023-05-04 14:19:56,500 INFO    MainThread:3772411 [wandb_run.py:_footer_history_summary_info():3501] rendering summary
+2023-05-04 14:19:56,501 INFO    MainThread:3772411 [wandb_run.py:_footer_sync_info():3428] logging synced files
+2023-05-04 14:19:56,501 DEBUG   HandlerThread:3772411 [handler.py:handle_request():144] handle_request: shutdown
+2023-05-04 14:19:56,501 INFO    HandlerThread:3772411 [handler.py:finish():845] shutting down handler
+2023-05-04 14:19:57,270 INFO    WriterThread:3772411 [datastore.py:close():298] close: /home/kjb/moofl/fedmoco/system/wandb/run-20230504_141406-kw83m403/run-kw83m403.wandb
+2023-05-04 14:19:57,500 INFO    SenderThread:3772411 [sender.py:finish():1550] shutting down sender
+2023-05-04 14:19:57,500 INFO    SenderThread:3772411 [file_pusher.py:finish():167] shutting down file pusher
+2023-05-04 14:19:57,500 INFO    SenderThread:3772411 [file_pusher.py:join():172] waiting for file pusher

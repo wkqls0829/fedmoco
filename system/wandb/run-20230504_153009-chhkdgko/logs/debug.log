@@ -1,0 +1,29 @@
+2023-05-04 15:30:09,844 INFO    MainThread:3785405 [wandb_setup.py:_flush():76] Current SDK version is 0.15.1
+2023-05-04 15:30:09,844 INFO    MainThread:3785405 [wandb_setup.py:_flush():76] Configure stats pid to 3785405
+2023-05-04 15:30:09,844 INFO    MainThread:3785405 [wandb_setup.py:_flush():76] Loading settings from /home/kjb/.config/wandb/settings
+2023-05-04 15:30:09,844 INFO    MainThread:3785405 [wandb_setup.py:_flush():76] Loading settings from /home/kjb/moofl/fedmoco/system/wandb/settings
+2023-05-04 15:30:09,844 INFO    MainThread:3785405 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-05-04 15:30:09,844 INFO    MainThread:3785405 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-05-04 15:30:09,844 INFO    MainThread:3785405 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'system/main.py', 'program': '/home/kjb/moofl/fedmoco/system/main.py'}
+2023-05-04 15:30:09,844 INFO    MainThread:3785405 [wandb_init.py:_log_setup():507] Logging user logs to /home/kjb/moofl/fedmoco/system/wandb/run-20230504_153009-chhkdgko/logs/debug.log
+2023-05-04 15:30:09,844 INFO    MainThread:3785405 [wandb_init.py:_log_setup():508] Logging internal logs to /home/kjb/moofl/fedmoco/system/wandb/run-20230504_153009-chhkdgko/logs/debug-internal.log
+2023-05-04 15:30:09,844 INFO    MainThread:3785405 [wandb_init.py:init():547] calling init triggers
+2023-05-04 15:30:09,844 INFO    MainThread:3785405 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {}
+2023-05-04 15:30:09,845 INFO    MainThread:3785405 [wandb_init.py:init():596] starting backend
+2023-05-04 15:30:09,845 INFO    MainThread:3785405 [wandb_init.py:init():600] setting up manager
+2023-05-04 15:30:09,846 INFO    MainThread:3785405 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-05-04 15:30:09,848 INFO    MainThread:3785405 [wandb_init.py:init():606] backend started and connected
+2023-05-04 15:30:09,849 INFO    MainThread:3785405 [wandb_init.py:init():700] updated telemetry
+2023-05-04 15:30:09,868 INFO    MainThread:3785405 [wandb_init.py:init():737] communicating run to backend with 60.0 second timeout
+2023-05-04 15:30:10,394 INFO    MainThread:3785405 [wandb_run.py:_on_init():2177] communicating current version
+2023-05-04 15:30:10,444 INFO    MainThread:3785405 [wandb_run.py:_on_init():2186] got version response 
+2023-05-04 15:30:10,444 INFO    MainThread:3785405 [wandb_init.py:init():787] starting run threads in backend
+2023-05-04 15:30:12,934 INFO    MainThread:3785405 [wandb_run.py:_console_start():2158] atexit reg
+2023-05-04 15:30:12,935 INFO    MainThread:3785405 [wandb_run.py:_redirect():2013] redirect: SettingsConsole.WRAP_RAW
+2023-05-04 15:30:12,935 INFO    MainThread:3785405 [wandb_run.py:_redirect():2078] Wrapping output streams.
+2023-05-04 15:30:12,935 INFO    MainThread:3785405 [wandb_run.py:_redirect():2103] Redirects installed.
+2023-05-04 15:30:12,936 INFO    MainThread:3785405 [wandb_init.py:init():829] run started, returning control to user process
+2023-05-04 15:30:12,941 INFO    MainThread:3785405 [wandb_run.py:_config_callback():1286] config_cb None None {'goal': 'cnn', 'device': 'cuda', 'device_id': '7', 'dataset': 'Cifar10', 'num_classes': 10, 'model': 'cnn', 'head': 'cnn', 'batch_size': 10, 'local_learning_rate': 0.005, 'global_rounds': 10, 'local_steps': 1, 'algorithm': 'FedCentral', 'join_ratio': 1.0, 'random_join_ratio': False, 'num_clients': 10, 'prev': 0, 'times': 1, 'eval_gap': 1, 'privacy': False, 'dp_sigma': 0.0, 'save_folder_name': 'items', 'client_drop_rate': 0.0, 'train_slow_rate': 0.0, 'send_slow_rate': 0.0, 'time_select': False, 'time_threthold': 10000, 'beta': 0.5, 'lamda': 1.0, 'mu': 0, 'K': 5, 'p_learning_rate': 0.01, 'M': 5, 'itk': 4000, 'alphaK': 1.0, 'sigma': 1.0, 'alpha': 1.0, 'plocal_steps': 1, 'tau': 1.0, 'fine_tuning_steps': 1, 'dr_learning_rate': 0.0, 'L': 1.0, 'finetune_round': 0, 'static_weight': 0.0, 'rho': 1.0, 'epsilon': 1.0, 'test_id': 90002, 'data_dir': None, 'central_data_num': 1, 'central_data_dir': 'Cifar10_central'}
+2023-05-04 15:30:14,613 INFO    MainThread:3785405 [wandb_watch.py:watch():51] Watching
+2023-05-04 15:33:16,648 WARNING MsgRouterThr:3785405 [router.py:message_loop():77] message_loop has been closed

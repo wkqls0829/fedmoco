@@ -51,21 +51,18 @@ class FedCentral(Server2):
         for i in range(self.global_rounds+1):
             s_t = time.time()
             self.selected_clients = self.select_clients()
-            self.send_models()
-
-            if i%self.eval_gap == 0:
-                print(f"\n-------------Round number: {i}-------------")
-                print("\nEvaluate global model")
-                self.evaluate()
 
 
             for cid in self.selected_client_ids:
                 local_loss = self.clients[cid].train()
                 self.local_losses[cid] = local_loss[0]
 
+
             self.rs_local_train_losses.append(list(self.local_losses))
+            self.rs_avg_train_loss.append(np.sum(self.local_losses)/len(self.selected_clients))
 
             self.global_model.train()
+            total_loss = .0
             for step in range(self.local_epochs):
                 train_iters = [iter(train_loader) for train_loader in self.train_loaders]
 
@@ -77,6 +74,8 @@ class FedCentral(Server2):
                     self.optimizer.zero_grad()
                     loss.backward()
                     self.optimizer.step()
+                    total_loss += loss.item() / y.shape[0]
+
                     for ti in train_iters[1:]:
                         (xt, yt) = next(ti)
                         xt = xt.to(self.device)
@@ -86,7 +85,15 @@ class FedCentral(Server2):
                         self.optimizer.zero_grad()
                         loss.backward()
                         self.optimizer.step()
+                        total_loss += loss.item() / y.shape[0]
 
+            self.rs_avg_train_loss.append(total_loss / self.local_epochs)
+            self.send_models()
+
+            if i%self.eval_gap == 0:
+                print(f"\n-------------Round number: {i}-------------")
+                print("\nEvaluate global model")
+                self.evaluate()
 
 
 
@@ -106,7 +113,7 @@ class FedCentral(Server2):
         print("\nBest accuracy.")
         # self.print_(max(self.rs_test_acc), max(
         #     self.rs_train_acc), min(self.rs_train_loss))
-        print(max(self.rs_test_acc))
+        print(max(self.rs_avg_test_acc))
         print("\nAverage time cost per round.")
         print(sum(self.Budget[1:])/len(self.Budget[1:]))
 

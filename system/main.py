@@ -8,6 +8,7 @@ import warnings
 import numpy as np
 import torchvision
 import logging
+import wandb
 
 from flcore.servers.serveravg import FedAvg
 from flcore.servers.serverpFedMe import pFedMe
@@ -265,6 +266,8 @@ def run(args):
 
 
 if __name__ == "__main__":
+
+    wandb.init()
     total_start = time.time()
 
     parser = argparse.ArgumentParser()
@@ -357,6 +360,10 @@ if __name__ == "__main__":
     parser.add_argument('-cdd', "--central_data_dir", type=str, default=None)
 
     args = parser.parse_args()
+    wandb.config.update(args)
+
+    wandb.run.name = f"{args.dataset}_{args.algorithm}_{args.test_id}"
+    wandb.run.save()
 
     os.environ["CUDA_VISIBLE_DEVICES"] = args.device_id
 

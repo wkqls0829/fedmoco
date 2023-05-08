@@ -1,5 +1,7 @@
 *__pycache__*
 dataset/Cifar10/
+dataset/Cifar10_iid/
+dataset/Cifar10_central/
 dataset/mnist/
 results/
 system/models/
