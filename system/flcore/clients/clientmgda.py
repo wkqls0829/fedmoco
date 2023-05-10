@@ -11,7 +11,7 @@ class clientMGDA(Client):
         super().__init__(args, id, train_samples, test_samples, **kwargs)
         
         self.loss = nn.CrossEntropyLoss()
-        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=self.learning_rate)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.learning_rate)
 
     def train(self):
         trainloader = self.load_train_data()

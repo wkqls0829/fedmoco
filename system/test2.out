@@ -1,14 +1,16 @@
 wandb: Currently logged in as: jabin. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.2 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.15.1
-wandb: Run data is saved locally in /home/kjb/moofl/fedmoco/system/wandb/run-20230504_153418-xv197a03
+wandb: Run data is saved locally in /home/kjb/moofl/fedmoco/system/wandb/run-20230509_114809-6impf22j
 wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run star-master-50
+wandb: Syncing run soft-sunset-66
 wandb: ⭐️ View project at https://wandb.ai/jabin/fedmoco-system
-wandb: 🚀 View run at https://wandb.ai/jabin/fedmoco-system/runs/xv197a03
+wandb: 🚀 View run at https://wandb.ai/jabin/fedmoco-system/runs/6impf22j
 wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
 ==================================================
-Algorithm: FedCentral
-Local batch size: 10
+Algorithm: FedSGD
+Local batch size: 1500
 Local steps: 1
 Local learing rate: 0.005
 Total number of clients: 10
@@ -21,7 +23,7 @@ Running times: 1
 Dataset: Cifar10
 Local model: cnn
 Using device: cuda
-Cuda device id: 7
+Cuda device id: 6
 ==================================================
 
 ============= Running time: 0th =============
@@ -66,138 +68,166 @@ None
 
 Join ratio / total clients: 1.0 / 10
 Finished creating server and clients.
-Cifar10_central
-1
 
 -------------Round number: 0-------------
 
 Evaluate global model
-[714.0, 707.0, 418.0, 398.0, 609.0, 577.0, 824.0, 779.0, 943.0, 948.0]
+[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 477.0, 501.0, 263.0, 253.0]
 [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
-Averaged Train Loss: 0.7796
-Averaged Test Accuracy: 0.4611
-------------------------- time cost ------------------------- 15.744190692901611
+Averaged Train Loss: 2.3043
+Averaged Test Accuracy: 0.0997
+------------------------- time cost ------------------------- 1.705686330795288
 
 -------------Round number: 1-------------
 
 Evaluate global model
-[921.0, 926.0, 702.0, 658.0, 598.0, 567.0, 960.0, 953.0, 996.0, 986.0]
+[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 472.0, 487.0, 302.0, 303.0]
 [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
-Averaged Train Loss: 0.4366
-Averaged Test Accuracy: 0.5511
-------------------------- time cost ------------------------- 14.308288812637329
+Averaged Train Loss: 2.3031
+Averaged Test Accuracy: 0.1043
+------------------------- time cost ------------------------- 0.25977444648742676
 
 -------------Round number: 2-------------
 
 Evaluate global model
-[837.0, 866.0, 619.0, 586.0, 809.0, 774.0, 1105.0, 1115.0, 1179.0, 1187.0]
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 475.0, 486.0, 326.0, 315.0]
 [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
-Averaged Train Loss: 0.3586
-Averaged Test Accuracy: 0.6051
-------------------------- time cost ------------------------- 13.758691787719727
+Averaged Train Loss: 2.3022
+Averaged Test Accuracy: 0.1068
+------------------------- time cost ------------------------- 0.25330138206481934
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
 
 -------------Round number: 3-------------
 
 Evaluate global model
-[969.0, 1006.0, 877.0, 830.0, 868.0, 863.0, 1004.0, 1049.0, 1153.0, 1170.0]
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 471.0, 479.0, 360.0, 345.0]
 [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
-Averaged Train Loss: 0.3046
-Averaged Test Accuracy: 0.6526
-------------------------- time cost ------------------------- 14.5652494430542
+Averaged Train Loss: 2.3019
+Averaged Test Accuracy: 0.1103
+------------------------- time cost ------------------------- 0.25393056869506836
 
 -------------Round number: 4-------------
 
 Evaluate global model
-[1061.0, 1081.0, 781.0, 730.0, 1005.0, 1013.0, 1148.0, 1158.0, 1225.0, 1235.0]
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 461.0, 460.0, 389.0, 375.0]
 [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
-Averaged Train Loss: 0.2658
-Averaged Test Accuracy: 0.6958
-------------------------- time cost ------------------------- 14.602473735809326
+Averaged Train Loss: 2.3010
+Averaged Test Accuracy: 0.1123
+------------------------- time cost ------------------------- 0.2514994144439697
 
 -------------Round number: 5-------------
 
 Evaluate global model
-[1187.0, 1211.0, 808.0, 774.0, 830.0, 834.0, 1218.0, 1223.0, 1205.0, 1227.0]
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 448.0, 437.0, 432.0, 416.0]
 [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
-Averaged Train Loss: 0.2368
-Averaged Test Accuracy: 0.7011
-------------------------- time cost ------------------------- 14.25199842453003
+Averaged Train Loss: 2.3001
+Averaged Test Accuracy: 0.1155
+------------------------- time cost ------------------------- 0.24744009971618652
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
 
 -------------Round number: 6-------------
 
 Evaluate global model
-[1190.0, 1210.0, 796.0, 740.0, 1004.0, 1008.0, 1234.0, 1259.0, 1257.0, 1248.0]
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 448.0, 431.0, 458.0, 439.0]
 [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
-Averaged Train Loss: 0.2162
-Averaged Test Accuracy: 0.7297
-------------------------- time cost ------------------------- 11.788002729415894
+Averaged Train Loss: 2.2996
+Averaged Test Accuracy: 0.1184
+------------------------- time cost ------------------------- 0.25670289993286133
 
 -------------Round number: 7-------------
 
 Evaluate global model
-[1204.0, 1210.0, 794.0, 767.0, 1171.0, 1175.0, 1193.0, 1235.0, 1286.0, 1308.0]
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 450.0, 425.0, 472.0, 453.0]
 [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
-Averaged Train Loss: 0.1925
-Averaged Test Accuracy: 0.7562
-------------------------- time cost ------------------------- 10.986040830612183
+Averaged Train Loss: 2.2986
+Averaged Test Accuracy: 0.1200
+------------------------- time cost ------------------------- 0.24952149391174316
 
 -------------Round number: 8-------------
 
 Evaluate global model
-[1197.0, 1228.0, 1029.0, 988.0, 1123.0, 1113.0, 1247.0, 1263.0, 1317.0, 1328.0]
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 408.0, 395.0, 524.0, 506.0]
 [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
-Averaged Train Loss: 0.1752
-Averaged Test Accuracy: 0.7889
-------------------------- time cost ------------------------- 11.044589519500732
+Averaged Train Loss: 2.2981
+Averaged Test Accuracy: 0.1222
+------------------------- time cost ------------------------- 0.26244020462036133
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
 
 -------------Round number: 9-------------
 
 Evaluate global model
-[1296.0, 1302.0, 1141.0, 1098.0, 1043.0, 1061.0, 1260.0, 1277.0, 1334.0, 1350.0]
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 396.0, 377.0, 564.0, 534.0]
 [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
-Averaged Train Loss: 0.1583
-Averaged Test Accuracy: 0.8108
-------------------------- time cost ------------------------- 11.062398433685303
+Averaged Train Loss: 2.2973
+Averaged Test Accuracy: 0.1247
+------------------------- time cost ------------------------- 0.262040376663208
 
 -------------Round number: 10-------------
 
 Evaluate global model
-[1357.0, 1363.0, 1018.0, 995.0, 1127.0, 1113.0, 1333.0, 1350.0, 1322.0, 1363.0]
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 381.0, 359.0, 598.0, 573.0]
 [1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
-Averaged Train Loss: 0.1443
-Averaged Test Accuracy: 0.8227
-------------------------- time cost ------------------------- 11.064178943634033
+Averaged Train Loss: 2.2963
+Averaged Test Accuracy: 0.1274
+------------------------- time cost ------------------------- 0.26046013832092285
 
 Best accuracy.
-0.8227333333333333
+0.1274
 
 Average time cost per round.
-12.743191266059876
-File path: ../results/Cifar10_FedCentral_nc=10_jr=1.0_90002.h5
+0.25571110248565676
+File path: ../results/Cifar10_FedSGD_nc=10_jr=1.0_90002.h5
 
-Average time cost: 151.4s.
+Average time cost: 10.38s.
 All done!
 
 Storage on cuda:0
 -------------------------------------------------------------------------------
-Total Tensors: 29870292 	Used Memory: 77.11M
-The allocated memory on cuda:0: 77.11M
+Total Tensors: 12299532 	Used Memory: 43.58M
+The allocated memory on cuda:0: 43.58M
 -------------------------------------------------------------------------------
 
 Storage on cpu
 -------------------------------------------------------------------------------
-Total Tensors: 737520000 	Used Memory: 1.37G
+Total Tensors: 368760000 	Used Memory: 703.59M
 -------------------------------------------------------------------------------
 wandb: Waiting for W&B process to finish... (success).
-wandb: - 0.007 MB of 0.007 MB uploaded (0.000 MB deduped)wandb: \ 0.007 MB of 0.007 MB uploaded (0.000 MB deduped)wandb: | 0.007 MB of 0.007 MB uploaded (0.000 MB deduped)wandb: / 0.007 MB of 0.007 MB uploaded (0.000 MB deduped)wandb: - 0.007 MB of 0.007 MB uploaded (0.000 MB deduped)wandb: 
+wandb: - 0.007 MB of 0.007 MB uploaded (0.000 MB deduped)wandb: \ 0.007 MB of 0.017 MB uploaded (0.000 MB deduped)wandb: | 0.007 MB of 0.019 MB uploaded (0.000 MB deduped)wandb: / 0.019 MB of 0.019 MB uploaded (0.000 MB deduped)wandb: 
 wandb: Run history:
-wandb: avg_train_loss █▄▃▃▂▂▂▂▁▁▁
-wandb:       test_acc ▁▃▄▅▆▆▆▇▇██
+wandb: avg_train_loss █▇▆▆▅▄▄▃▃▂▁
+wandb:       test_acc ▁▂▃▄▄▅▆▆▇▇█
 wandb: 
 wandb: Run summary:
-wandb: avg_train_loss 0.14428
-wandb:       test_acc 0.82273
+wandb: avg_train_loss 2.2963
+wandb:       test_acc 0.1274
 wandb: 
-wandb: 🚀 View run star-master-50 at: https://wandb.ai/jabin/fedmoco-system/runs/xv197a03
+wandb: 🚀 View run soft-sunset-66 at: https://wandb.ai/jabin/fedmoco-system/runs/6impf22j
 wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
-wandb: Find logs at: ./wandb/run-20230504_153418-xv197a03/logs
+wandb: Find logs at: ./wandb/run-20230509_114809-6impf22j/logs

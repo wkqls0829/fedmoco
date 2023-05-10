@@ -6,12 +6,12 @@ from flcore.clients.clientbase import Client
 from utils.privacy import *
 
 
-class clientMGDA(Client):
+class clientSGD(Client):
     def __init__(self, args, id, train_samples, test_samples, **kwargs):
         super().__init__(args, id, train_samples, test_samples, **kwargs)
         
         self.loss = nn.CrossEntropyLoss()
-        self.optimizer = torch.optim.SGD(self.model.parameters(), lr=self.learning_rate)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.learning_rate)
 
         self.train_loader = self.load_train_data()
         self.train_iter = iter(self.train_loader)

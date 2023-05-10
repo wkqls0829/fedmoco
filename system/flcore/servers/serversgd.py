@@ -1,5 +1,5 @@
 import time
-from flcore.clients.clientmgda import clientMGDA
+from flcore.clients.clientsgd import clientSGD
 
 from flcore.servers.serverbase import Server
 from flcore.servers.serverbase2 import Server2
@@ -8,6 +8,7 @@ from threading import Thread
 import numpy as np
 import quadprog
 import torch
+import torch.nn as nn
 
 
 class FedSGD(Server2):
@@ -28,6 +29,9 @@ class FedSGD(Server2):
         self.Budget = []
 
         self.finetune_round = args.finetune_round
+
+        self.loss = nn.CrossEntropyLoss()
+        self.optimizer = torch.optim.SGD(self.global_model.parameters(), lr=args.local_learning_rate)
 
 
 

@@ -6,4 +6,5 @@ dataset/mnist/
 results/
 system/models/
 system/outputs/
+system/wandb/
 *.ipynb

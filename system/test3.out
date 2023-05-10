@@ -1,17 +1,19 @@
 wandb: Currently logged in as: jabin. Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.2 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
 wandb: Tracking run with wandb version 0.15.1
-wandb: Run data is saved locally in /home/kjb/moofl/fedmoco/system/wandb/run-20230504_153418-s2x2nooo
+wandb: Run data is saved locally in /home/kjb/moofl/fedmoco/system/wandb/run-20230509_114809-6ia8vhr0
 wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run forgotten-speeder-49
+wandb: Syncing run resilient-firebrand-67
 wandb: ⭐️ View project at https://wandb.ai/jabin/fedmoco-system
-wandb: 🚀 View run at https://wandb.ai/jabin/fedmoco-system/runs/s2x2nooo
+wandb: 🚀 View run at https://wandb.ai/jabin/fedmoco-system/runs/6ia8vhr0
 wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
 ==================================================
-Algorithm: FedCentral
-Local batch size: 10
+Algorithm: FedSGD
+Local batch size: 6000
 Local steps: 1
 Local learing rate: 0.005
-Total number of clients: 1
+Total number of clients: 10
 Clients join in each round: 1.0
 Client drop rate: 0.0
 Time select: False
@@ -21,7 +23,7 @@ Running times: 1
 Dataset: Cifar10
 Local model: cnn
 Using device: cuda
-Cuda device id: 6
+Cuda device id: 5
 ==================================================
 
 ============= Running time: 0th =============
@@ -43,143 +45,380 @@ FedAvgCNN(
   )
   (fc): Linear(in_features=512, out_features=10, bias=True)
 )
-Cifar10_central
-Cifar10_central
+None
+None
+full batch mode: 4500
+None
+None
+full batch mode: 4500
+None
+None
+full batch mode: 4500
+None
+None
+full batch mode: 4500
+None
+None
+full batch mode: 4500
+None
+None
+full batch mode: 4500
+None
+None
+full batch mode: 4500
+None
+None
+full batch mode: 4500
+None
+None
+full batch mode: 4500
+None
+None
+full batch mode: 4500
 
-Join ratio / total clients: 1.0 / 1
+Join ratio / total clients: 1.0 / 10
 Finished creating server and clients.
-Cifar10_central
-1
 
 -------------Round number: 0-------------
 
 Evaluate global model
-[6893.0]
-[15000]
-Averaged Train Loss: 1.7895
-Averaged Test Accuracy: 0.4595
-------------------------- time cost ------------------------- 15.027377843856812
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 487.0, 510.0, 257.0, 247.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 2.3039
+Averaged Test Accuracy: 0.1001
+------------------------- time cost ------------------------- 2.0100066661834717
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
 
 -------------Round number: 1-------------
 
 Evaluate global model
-[7995.0]
-[15000]
-Averaged Train Loss: 1.3917
-Averaged Test Accuracy: 0.5330
-------------------------- time cost ------------------------- 13.691964387893677
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+[0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 479.0, 499.0, 287.0, 281.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 2.3032
+Averaged Test Accuracy: 0.1031
+------------------------- time cost ------------------------- 0.5990934371948242
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
 
 -------------Round number: 2-------------
 
 Evaluate global model
-[8929.0]
-[15000]
-Averaged Train Loss: 1.2092
-Averaged Test Accuracy: 0.5953
-------------------------- time cost ------------------------- 14.091151237487793
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 475.0, 485.0, 327.0, 315.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 2.3024
+Averaged Test Accuracy: 0.1068
+------------------------- time cost ------------------------- 0.6236429214477539
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
 
 -------------Round number: 3-------------
 
 Evaluate global model
-[9446.0]
-[15000]
-Averaged Train Loss: 1.0692
-Averaged Test Accuracy: 0.6297
-------------------------- time cost ------------------------- 13.699006080627441
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 466.0, 472.0, 363.0, 353.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 2.3017
+Averaged Test Accuracy: 0.1103
+------------------------- time cost ------------------------- 0.6017031669616699
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
 
 -------------Round number: 4-------------
 
 Evaluate global model
-[9875.0]
-[15000]
-Averaged Train Loss: 0.9636
-Averaged Test Accuracy: 0.6583
-------------------------- time cost ------------------------- 13.853233575820923
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 458.0, 456.0, 394.0, 377.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 2.3010
+Averaged Test Accuracy: 0.1123
+------------------------- time cost ------------------------- 0.6579053401947021
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
 
 -------------Round number: 5-------------
 
 Evaluate global model
-[10044.0]
-[15000]
-Averaged Train Loss: 0.8718
-Averaged Test Accuracy: 0.6696
-------------------------- time cost ------------------------- 13.940085649490356
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 448.0, 434.0, 434.0, 417.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 2.3002
+Averaged Test Accuracy: 0.1155
+------------------------- time cost ------------------------- 0.5860111713409424
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
 
 -------------Round number: 6-------------
 
 Evaluate global model
-[10353.0]
-[15000]
-Averaged Train Loss: 0.7926
-Averaged Test Accuracy: 0.6902
-------------------------- time cost ------------------------- 13.86374807357788
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 443.0, 421.0, 461.0, 446.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 2.2995
+Averaged Test Accuracy: 0.1181
+------------------------- time cost ------------------------- 0.5990910530090332
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
 
 -------------Round number: 7-------------
 
 Evaluate global model
-[10698.0]
-[15000]
-Averaged Train Loss: 0.7157
-Averaged Test Accuracy: 0.7132
-------------------------- time cost ------------------------- 13.638574600219727
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 430.0, 406.0, 489.0, 475.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 2.2988
+Averaged Test Accuracy: 0.1200
+------------------------- time cost ------------------------- 0.5897622108459473
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
 
 -------------Round number: 8-------------
 
 Evaluate global model
-[10533.0]
-[15000]
-Averaged Train Loss: 0.6452
-Averaged Test Accuracy: 0.7022
-------------------------- time cost ------------------------- 13.677438974380493
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 408.0, 396.0, 524.0, 506.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 2.2980
+Averaged Test Accuracy: 0.1223
+------------------------- time cost ------------------------- 0.5937619209289551
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
 
 -------------Round number: 9-------------
 
 Evaluate global model
-[10832.0]
-[15000]
-Averaged Train Loss: 0.5770
-Averaged Test Accuracy: 0.7221
-------------------------- time cost ------------------------- 13.939097881317139
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 402.0, 381.0, 555.0, 530.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 2.2972
+Averaged Test Accuracy: 0.1245
+------------------------- time cost ------------------------- 0.615145206451416
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
+new batch
 
 -------------Round number: 10-------------
 
 Evaluate global model
-[10740.0]
-[15000]
-Averaged Train Loss: 0.5122
-Averaged Test Accuracy: 0.7160
-------------------------- time cost ------------------------- 13.746842384338379
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+test full batch mode: 1500
+[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 395.0, 367.0, 584.0, 560.0]
+[1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500]
+Averaged Train Loss: 2.2965
+Averaged Test Accuracy: 0.1271
+------------------------- time cost ------------------------- 0.6171398162841797
 
 Best accuracy.
-0.7221333333333333
+0.12706666666666666
 
 Average time cost per round.
-13.81411428451538
-File path: ../results/Cifar10_FedCentral_nc=1_jr=1.0_90003.h5
+0.6083256244659424
+File path: ../results/Cifar10_FedSGD_nc=10_jr=1.0_90003.h5
 
-Average time cost: 161.7s.
+Average time cost: 14.22s.
 All done!
 
 Storage on cuda:0
 -------------------------------------------------------------------------------
-Total Tensors: 6149766 	Used Memory: 16.76M
-The allocated memory on cuda:0: 16.76M
+Total Tensors: 12299532 	Used Memory: 43.58M
+The allocated memory on cuda:0: 44.22M
+Memory differs due to the matrix alignment or invisible gradient buffer tensors
 -------------------------------------------------------------------------------
 
 Storage on cpu
 -------------------------------------------------------------------------------
-Total Tensors: 737520000 	Used Memory: 1.37G
+Total Tensors: 368760000 	Used Memory: 703.59M
 -------------------------------------------------------------------------------
 wandb: Waiting for W&B process to finish... (success).
-wandb: - 0.007 MB of 0.007 MB uploaded (0.000 MB deduped)wandb: \ 0.007 MB of 0.016 MB uploaded (0.000 MB deduped)wandb: | 0.016 MB of 0.031 MB uploaded (0.000 MB deduped)wandb: / 0.031 MB of 0.031 MB uploaded (0.000 MB deduped)wandb: 
+wandb: - 0.007 MB of 0.007 MB uploaded (0.000 MB deduped)wandb: \ 0.007 MB of 0.007 MB uploaded (0.000 MB deduped)wandb: | 0.007 MB of 0.007 MB uploaded (0.000 MB deduped)wandb: / 0.007 MB of 0.007 MB uploaded (0.000 MB deduped)wandb: 
 wandb: Run history:
-wandb: avg_train_loss █▆▅▄▃▃▃▂▂▁▁
-wandb:       test_acc ▁▃▅▆▆▇▇█▇██
+wandb: avg_train_loss █▇▇▆▅▅▄▃▂▂▁
+wandb:       test_acc ▁▂▃▄▄▅▆▆▇▇█
 wandb: 
 wandb: Run summary:
-wandb: avg_train_loss 0.51216
-wandb:       test_acc 0.716
+wandb: avg_train_loss 2.29646
+wandb:       test_acc 0.12707
 wandb: 
-wandb: 🚀 View run forgotten-speeder-49 at: https://wandb.ai/jabin/fedmoco-system/runs/s2x2nooo
+wandb: 🚀 View run resilient-firebrand-67 at: https://wandb.ai/jabin/fedmoco-system/runs/6ia8vhr0
 wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
-wandb: Find logs at: ./wandb/run-20230504_153418-s2x2nooo/logs
+wandb: Find logs at: ./wandb/run-20230509_114809-6ia8vhr0/logs

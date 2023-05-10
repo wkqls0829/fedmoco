@@ -33,6 +33,8 @@ from flcore.servers.serverapple import APPLE
 from flcore.servers.servermgda import FedMGDA
 from flcore.servers.servermoco import FedMoCo
 from flcore.servers.servercentral import FedCentral
+from flcore.servers.serversgd import FedSGD
+from flcore.servers.servermsgd import FedMSGD
 
 from flcore.trainmodel.models import *
 
@@ -243,6 +245,12 @@ def run(args):
         elif args.algorithm == "FedCentral":
             server = FedCentral(args, i)
 
+        elif args.algorithm == "FedSGD":
+            server = FedSGD(args, i)
+
+        # elif args.algorithm == "FedMSGD":
+            # server = FedMSGD(args, i)
+
         else:
             raise NotImplementedError
 
@@ -282,7 +290,7 @@ if __name__ == "__main__":
     parser.add_argument('-m', "--model", type=str, default="cnn")
     parser.add_argument('-p', "--head", type=str, default="cnn")
     parser.add_argument('-lbs', "--batch_size", type=int, default=10)
-    parser.add_argument('-lr', "--local_learning_rate", type=float, default=0.005,
+    parser.add_argument('-lr', "--local_learning_rate", type=float, default=0.001,
                         help="Local learning rate")
     parser.add_argument('-gr', "--global_rounds", type=int, default=1000)
     parser.add_argument('-ls', "--local_steps", type=int, default=1)

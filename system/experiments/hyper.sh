@@ -1,12 +1,24 @@
 #!/bin/bash
 
-nohup python -u main.py -nc 10 -lbs 300 -data Cifar10 -m cnn -algo FedSGD -gr 10 -jr 1 -bt 0.5 -rh 1 -did 7 -go cnn -fr 0 -tid 90001  > test1.out 2>&1 &
-nohup python -u main.py -nc 10 -lbs 1500 -data Cifar10 -m cnn -algo FedSGD -gr 10 -jr 1 -bt 0.5 -rh 1 -did 6 -go cnn -fr 0 -tid 90002  > test2.out 2>&1 &
-nohup python -u main.py -nc 10 -lbs 6000 -data Cifar10 -m cnn -algo FedSGD -gr 10 -jr 1 -bt 0.5 -rh 1 -did 5 -go cnn -fr 0 -tid 90003  > test3.out 2>&1 &
-# nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedMGDA -gr 1000 -rh 0.1  -did 5 -go cnn -fr 0 -bt 1 -tid 10021 > outputs/cifar10_fedavg_10_10021.out 2>&1 &
+# nohup python -u main.py -nc 1 -lbs 16 -data Cifar10 -m resnet -algo FedMGDA -gr 1000 -rh 1  -did 0 -go cnn -fr 0 -tid 10111 -dd Cifar10_central > outputs/cifar10_fedavg_10_10111.out 2>&1 &
+# nohup python -u main.py -nc 10 -lbs 16 -data Cifar10 -m resnet -algo FedMGDA -gr 1000 -rh 1  -did 1 -go cnn -fr 0 -tid 10112 -dd Cifar10_iid > outputs/cifar10_fedavg_10_10112.out 2>&1 &
+# nohup python -u main.py -nc 10 -lbs 16 -data Cifar10 -m resnet -algo FedMGDA -gr 1000 -rh 1  -did 2 -go cnn -fr 0 -tid 10113 > outputs/cifar10_fedavg_10_10113.out 2>&1 &
+nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedCentral -lbs 16 -gr 500 -rh 1 -lr 0.001 -did 0 -go cnn -fr 0 -tid 41001 -cdn 1 -cdd Cifar10_central > outputs/cifar10_fedavg_10_41001.out 2>&1 &
 
-# nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedMoCo -gr 1000 -rh 0.1  -did 6 -go cnn -fr 2000 -bt 0.5 -tid 30021 > outputs/cifar10_fedmoco_10_30021.out 2>&1 &
+nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedMGDA -lbs 16 -gr 500 -rh 1 -lr 0.001 -did 0 -go cnn -fr 0 -tid 41003 > outputs/cifar10_fedavg_10_41003.out 2>&1 &
+nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedMGDA -lbs 16 -gr 500 -rh 1 -lr 0.001 -did 0 -go cnn -fr 0 -tid 41004 -dd Cifar10_iid > outputs/cifar10_fedavg_10_41004.out 2>&1 &
 
+
+nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedCentral -lbs 16 -gr 500 -rh 1 -lr 0.01 -did 2 -go cnn -fr 0 -tid 41011 -cdn 1 -cdd Cifar10_central > outputs/cifar10_fedavg_10_41011.out 2>&1 &
+
+nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedMGDA -lbs 16 -gr 500 -rh 1 -lr 0.01 -did 2 -go cnn -fr 0 -tid 41013 > outputs/cifar10_fedavg_10_41013.out 2>&1 &
+nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedMGDA -lbs 16 -gr 500 -rh 1 -lr 0.01 -did 2 -go cnn -fr 0 -tid 41014 -dd Cifar10_iid > outputs/cifar10_fedavg_10_41014.out 2>&1 &
+
+
+nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedCentral -lbs 16 -gr 500 -rh 1 -lr 0.001 -did 3 -go cnn -fr 0 -tid 41021 -cdn 1 -cdd Cifar10_central > outputs/cifar10_fedavg_10_41021.out 2>&1 &
+
+nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedMGDA -lbs 16 -gr 500 -rh 1 -lr 0.001 -did 3 -go cnn -fr 0 -tid 41023 > outputs/cifar10_fedavg_10_41023.out 2>&1 &
+nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedMGDA -lbs 16 -gr 500 -rh 1 -lr 0.001 -did 3 -go cnn -fr 0 -tid 41024 -dd Cifar10_iid > outputs/cifar10_fedavg_10_41024.out 2>&1 &
 # join ratio experiment 
 # nohup python -u main.py -nc 20 -data Cifar10 -m cnn -algo FedMGDA -gr 1000 -jr 0.5 -did 7 -go cnn -fr 2000 -tid 20001 > outputs/cifar10_fedmgda_20.out 2>&1 &
 # nohup python -u main.py -nc 20 -data Cifar10 -m cnn -algo FedMGDA -gr 1000 -jr 0.25 -did 7 -go cnn -fr 2000 -tid 20002 > outputs/cifar10_fedmgda_5.out 2>&1 &

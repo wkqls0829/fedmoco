@@ -54,11 +54,19 @@ class Client(object):
     def load_train_data(self, batch_size=None):
         if batch_size == None:
             batch_size = self.batch_size
+        if batch_size > len(self.train_data):
+            print(f"full batch mode: {len(self.train_data)}")
+            batch_size = len(self.train_data)
+
+
         return DataLoader(self.train_data, batch_size, drop_last=True, shuffle=True)
 
     def load_test_data(self, batch_size=None):
         if batch_size == None:
             batch_size = self.batch_size
+        if batch_size > len(self.test_data):
+            print(f"test full batch mode: {len(self.test_data)}")
+            batch_size = len(self.test_data)
         return DataLoader(self.test_data, batch_size, drop_last=False, shuffle=False)
         
     def set_parameters(self, model):

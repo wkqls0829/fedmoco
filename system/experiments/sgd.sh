@@ -1,9 +1,13 @@
 #!/bin/bash
 
-nohup python -u main.py -nc 10 -lbs 300 -data Cifar10 -m cnn -algo FedSGD -gr 10 -jr 1 -bt 0.5 -rh 1 -did 7 -go cnn -fr 0 -tid 90001  > test1.out 2>&1 &
-nohup python -u main.py -nc 10 -lbs 1500 -data Cifar10 -m cnn -algo FedSGD -gr 10 -jr 1 -bt 0.5 -rh 1 -did 6 -go cnn -fr 0 -tid 90002  > test2.out 2>&1 &
-nohup python -u main.py -nc 10 -lbs 6000 -data Cifar10 -m cnn -algo FedSGD -gr 10 -jr 1 -bt 0.5 -rh 1 -did 5 -go cnn -fr 0 -tid 90003  > test3.out 2>&1 &
-# nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedMGDA -gr 1000 -rh 0.1  -did 5 -go cnn -fr 0 -bt 1 -tid 10021 > outputs/cifar10_fedavg_10_10021.out 2>&1 &
+nohup python -u main.py -nc 10 -lbs 4500 -data Cifar10 -m cnn -algo FedSGD -gr 1000 -eg 1 -jr 1 -lr 0.1 -bt 0.5 -rh 1 -did 7 -go cnn -fr 0 -tid 50011  > outputs/cifar10_fedsgd_10_50011 2>&1 &
+nohup python -u main.py -nc 10 -lbs 500 -data Cifar10 -m cnn -algo FedSGD -gr 9000 -eg 9 -jr 1 -lr 0.01 -bt 0.5 -rh 1 -did 7 -go cnn -fr 0 -tid 50012  > outputs/cifar10_fedsgd_10_50012 2>&1 &
+nohup python -u main.py -nc 10 -lbs 100 -data Cifar10 -m cnn -algo FedSGD -gr 45000 -eg 45 -jr 1 -lr 0.002 -bt 0.5 -rh 1 -did 7 -go cnn -fr 0 -tid 50013  > outputs/cifar10_fedsgd_10_50013 2>&1 &
+# nohup python -u main.py -nc 10 -lbs 100 -data Cifar10 -m cnn -algo FedSGD -gr 45000 -eg 45 -jr 1 -bt 0.5 -rh 1 -did 1 -go cnn -fr 0 -tid 50004  > outputs/cifar10_fedsgd_10_50004 2>&1 &
+
+# nohup python -u main.py -nc 10 -lbs 4500 -data Cifar10 -m cnn -algo FedSGD -gr 1000 -eg 1 -jr 1 -lr 0.1 -bt 0.5 -rh 1 -did 3 -go cnn -fr 0 -tid 50111  -dd Cifar10_iid > outputs/cifar10_fedsgd_10_50111 2>&1 &
+# nohup python -u main.py -nc 10 -lbs 500 -data Cifar10 -m cnn -algo FedSGD -gr 9000 -eg 9 -jr 1 -lr 0.01 -bt 0.5 -rh 1 -did 3 -go cnn -fr 0 -tid 50112  -dd Cifar10_iid > outputs/cifar10_fedsgd_10_50112 2>&1 &
+# nohup python -u main.py -nc 10 -lbs 100 -data Cifar10 -m cnn -algo FedSGD -gr 45000 -eg 45 -jr 1 -lr 0.002 -bt 0.5 -rh 1 -did 3 -go cnn -fr 0 -tid 50113  -dd Cifar10_iid > outputs/cifar10_fedsgd_10_50113 2>&1 &
 
 # nohup python -u main.py -nc 10 -data Cifar10 -m cnn -algo FedMoCo -gr 1000 -rh 0.1  -did 6 -go cnn -fr 2000 -bt 0.5 -tid 30021 > outputs/cifar10_fedmoco_10_30021.out 2>&1 &
 

@@ -10,7 +10,7 @@ import quadprog
 import torch
 
 
-class FedSGD(Server2):
+class FedMSGD(Server2):
     def __init__(self, args, times):
         super().__init__(args, times)
 
